@@ -6,4 +6,3 @@
 	<title>Le royaume de la caillasse</title>
 </head>
 <body>
-	
