@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c284a9c122da36c99a8b6597bdce7aa6",
-    "content-hash": "8b1485987e7c5949da82435d403e52e8",
+    "hash": "664d744704117c75b41dc7ecdfc690dd",
+    "content-hash": "1a7819163854bad2a7dc24682aabce22",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1777,6 +1777,37 @@
                 "environment"
             ],
             "time": "2016-06-14 14:14:52"
+        },
+        {
+            "name": "wangaz/laravel-semantic-ui-css",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wangaz/laravel-semantic-ui-css.git",
+                "reference": "8539b182e831168c5b568e537de55639de17848c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wangaz/laravel-semantic-ui-css/zipball/8539b182e831168c5b568e537de55639de17848c",
+                "reference": "8539b182e831168c5b568e537de55639de17848c",
+                "shasum": ""
+            },
+            "provide": {
+                "jquery/jquery": "2.2.0",
+                "semantic/ui-css": "2.1.8"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Semantic UI Implementation for Laravel",
+            "keywords": [
+                "css",
+                "laravel",
+                "semantic ui"
+            ],
+            "time": "2016-03-15 10:29:58"
         }
     ],
     "packages-dev": [
