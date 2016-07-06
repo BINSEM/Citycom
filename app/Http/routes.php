@@ -11,12 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('article.ajoutArticle');
-});
-
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::post('/nouvelArticle/{id}','ProductController@postProduct');

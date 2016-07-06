@@ -1,16 +1,10 @@
-@extends('layouts.main')
-
-@section('content')
-<h1>Test</h1>
-<div class="ui huge form">
+@include('parts.header')
+<form method="POST" action="/nouvelArticle/" class="ui huge form">
+  {{csrf_field()}}
   <div class="two fields">
     <div class="field">
       <label>Nom de l'article</label>
-      <input placeholder="article" type="text">
-    </div>
-    <div class="field">
-      <label>Identifiant de l'article</label>
-      <input placeholder="Id" type="text">
+      <input name="nom" placeholder="article" type="text">
     </div>
     <div class="field">
     <label>Description</label>
@@ -23,7 +17,7 @@
   </div>
   <div class="field">
     <label>Référence</label>
-    <input type="text" name="reference" placeholder="Référence">
+    <input type="text" name="ref" placeholder="Référence">
   </div>
   <div class="field">
     <label>Catégorie</label>
@@ -31,12 +25,11 @@
   </div>
   <div class="field">
     <label>Image</label>
-    <input type="text" name="image" placeholder="Image">
+    <input type="text" name="img" placeholder="Image">
   </div>
   <div class="field">
     <label>Stock</label>
     <input type="text" name="stock" placeholder="Stock">
   </div>
-  <div class="ui submit button">Submit</div>
-</div>
-@endsection
+  <input class="ui submit button" value="Enregister" type="submit"/>
+</form>
