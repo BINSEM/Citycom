@@ -1,5 +1,5 @@
 @include('parts.header')
-<form method="POST" action="/nouvelArticle" class="ui huge form">
+<form method="POST" action="/nouvelArticle/{{$article->id}}" class="ui huge form">
   {{csrf_field()}}
   <div class="two fields">
     <div class="field">

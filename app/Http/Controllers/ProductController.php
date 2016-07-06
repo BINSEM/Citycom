@@ -18,4 +18,8 @@ class ProductController extends Controller
     	$article->img = $req->input('img');
     	$article->save();
     }
+
+    public function getProduct(){
+        
+    }
 }

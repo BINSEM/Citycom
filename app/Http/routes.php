@@ -19,4 +19,4 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::post('/nouvelArticle','ProductController@postProduct');
+Route::post('/nouvelArticle/{id}','ProductController@postProduct');
