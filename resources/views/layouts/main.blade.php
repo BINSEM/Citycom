@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Citycom</title>
+	@include('parts.header')
 </head>
 <body>
-	@include('parts.header')
+	@include('parts.navbar')
 	
-	
+	@yield('content')
 
 	@include('parts.footer')
 </body>

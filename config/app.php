@@ -157,6 +157,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+        * Custom Service Providers
+        */
+        Admin\Http\Providers\AdminServiceProvider::class,
+        Article\Http\Providers\ArticleServiceProvider::class,
+        Order\Http\Providers\OrderServiceProvider::class
+
     ],
 
     /*
