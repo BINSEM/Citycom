@@ -1,7 +1,14 @@
-@extends('layouts.main')
+@extends('admin::layout')
 
 @section('content')
 
-<h1>Admin Panel</h1>
+<h1>Paneau de l'Administrateur</h1>
+<ul>
+	<li><a href="/admin/users">Gestion des utilisateurs</a></li>
+	<li><a href="/admin/categories">Ajouter/Supprimer des catégories</a></li>
+	<li><a href="/admin/articles">Ajouter/Supprimer des articles</a></li>
+	<li><a href="/admin/paiements">Ajouter/Supprimer des moyens de paiement</a></li>
+	<li><a href="/admin/commandes">Suivi des commandes</a></li>
+</ul>
 
 @endsection
