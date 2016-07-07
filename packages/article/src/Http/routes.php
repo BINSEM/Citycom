@@ -15,15 +15,23 @@
 Route::group(['prefix' => 'article'], function () {
 	Route::controller('/', 'Article\Controller\ProductController');
 });
+// chemin à la racine vers la vue de la liste des articles
+Route::get('/', 'Article\Controller\ProductController@listProduct');
 
-Route::get('/', function () {
-    return view('article::ajoutArticle');
+Route::get('/listeArticles', 'Article\Controller\ProductController@listProduct');
+
+Route::get('/ajoutArticle', function(){
+	return view('article::ajoutArticle');
 });
 // enregistrement d'un article dans la base de données
 Route::post('/nouvelArticle','Article\Controller\ProductController@postProduct');
 // récupérer les données d'un articles
 Route::get('/nouvelArticle/{id}', 'Article\Controller\ProductController@getProduct');
-// modification d'un article
+// vue d'édition d'un article
 Route::get('/editerArticle/{id}','Article\Controller\ProductController@editProduct');
+// modification d'un article
+Route::post('/vueArticle/{id}','Article\Controller\ProductController@updateProduct');
+// Liste des articles enregistées
 
-Route::post('/updateArticle/{id}','Article\Controller\ProductController@updateProduct');
+// Suppression d'un article (sauf dans la base données)
+Route::get('/suppression/{id}', 'Article\Controller\ProductController@deleteProduct');

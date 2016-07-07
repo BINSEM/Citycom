@@ -1,5 +1,8 @@
 @include('parts.header')
-
+<div class="ui vertical pointing menu">
+  <a href="/listeArticles" class="item">Liste des articles </a>
+  <a href="/ajoutArticle" class="item">Ajouter un article </a>
+</div>
 <!-- champ détail de l'article -->
 <h1>Nouvel article enregistré</h1>
 <label for="id">Id</label>
@@ -21,5 +24,5 @@
 <!-- menu vertical de modification des données -->
 <div class="ui vertical pointing menu">
   <a href="/editerArticle/{{$article->id}}" class="item">Editer </a>
-  <a class="item">Supprimer </a>
+  <a href="/suppression/{{$article->id}}" class="item">Supprimer </a>
 </div>
