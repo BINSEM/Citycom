@@ -1,5 +1,9 @@
 
-<div class="ui menu">
+
+<div class="ui grid">
+  <div class="computer tablet only row">
+    <div class="ui  fixed menu  grid">
+
 	<a class="item" href="/">Accueil</a>
 	<div class="ui dropdown item">
 		Categories
@@ -14,13 +18,15 @@
 	<div class="right menu">
 		<form class="ui form">
 			<div class="item">
-				<input type="button" onClick="parent.location='/register'" class="ui fluid primary button" value="Inscription" /> 
+				<input type="button" onClick="parent.location='/register'" class="ui fluid gray button" value="Inscription" /> 
 				&nbsp;
 				&nbsp;
-				<input type="button" onClick="parent.location='/login'" class="ui fluid teal button" value="Connexion" />
+				<input type="button" onClick="parent.location='/login'" class="ui fluid gray button" value="Connexion" />
 			</div>
 		</form>
 	</div>
+</div>
+</div>
 </div>
 
 
