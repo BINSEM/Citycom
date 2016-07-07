@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 <div class="ui grid">
 	<div class="computer tablet only row" id="oriheader">
 		<div class="ui fixed menu grid">
