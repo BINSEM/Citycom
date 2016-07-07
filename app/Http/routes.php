@@ -15,6 +15,7 @@ Route::get('/', function () {
 	return view('home');
 });
 
+
 Route::auth();
 
 /* ---------------------------------------------
@@ -40,10 +41,6 @@ Route::get('/orders', 'HomeController@orders');
  Route::get('/adresse/add', 'AdresseController@adresseAdd');
  Route::get('/adresse/edit/{id}', 'AdresseController@editAdresse');
  Route::post('/adresse/update/{id}', 'AdresseController@updateAdresse');
-
- /* ---------------------------------------------
- Controller
- ---------------------------------------------*/
 
  /* ---------------------------------------------
  Controller
