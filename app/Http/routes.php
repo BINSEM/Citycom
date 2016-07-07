@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-	return view('article.ajoutArticle');
+	return view('/home');
 });
 
 Route::auth();

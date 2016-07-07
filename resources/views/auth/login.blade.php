@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="ui grid">
+<div class="ui grid" >
                 &nbsp;
                 &nbsp;
 
 <div class="three column row">
-     <div class="centered floated column">
+     <div class="centered floated column"id="connection">
      <div class="ui header">Se connecter au Royaume de la Caillasse</div>
         <form class="ui form" role="form" method="POST" action="{{ url('/login') }}">
             {{ csrf_field() }}
@@ -34,18 +34,9 @@
                 @endif
             </div>
                 &nbsp;
-
-            <div class="ui form">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="remember">Se souvenir de moi</input>
-                    </label>
-                </div>
-            </div>
-
                 &nbsp;
             <div class="ui form">
-                <input type="submit" class="ui blue button">
+                <input type="submit" class="ui yellow button">
                 <i class="signin"></i> 
             </input>
 

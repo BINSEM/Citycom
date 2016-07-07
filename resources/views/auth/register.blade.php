@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="ui grid">
+<div class="ui grid" >
     &nbsp;
     &nbsp;
 
     <div class="three column row">
-       <div class="centered floated column">
+       <div class="centered floated column"id="inscription">
            <div class="ui header">S'inscrire au Royaume de la Caillasse</div>
            <form class="ui form" role="form" method="POST" action="{{ url('/register') }}">
             {{ csrf_field() }}
@@ -69,7 +69,7 @@
                 &nbsp;
             </div>
 
-            <button type="submit" class="ui teal button">S'inscrire</button>
+            <button type="submit" class="ui yellow button">S'inscrire</button>
         </form>
     </div>
 </div>

@@ -18,12 +18,12 @@
 				<form class="ui form">
 					<div class="item">
 						<div class="shake-chunk">
-							<input type="button" onClick="parent.location='/register'" class="ui fluid gray button" value="Inscription" />
+							<input type="button" onClick="parent.location='/register'" class="ui fluid yellow button" value="Inscription" />
 						</div> 
 						&nbsp;
 						&nbsp;
 						<div class="shake-little">
-							<input type="button" onClick="parent.location='/login'" class="ui fluid gray button" value="Connexion" />
+							<input type="button" onClick="parent.location='/login'" class="ui fluid yellow button" value="Connexion" />
 						</div>
 					</div>
 				</form>
