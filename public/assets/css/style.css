@@ -41,3 +41,60 @@
 		padding: 0 1rem !important;
 	}
 }
+
+/*-------------------------------Header-Ori---------------------------------*/
+#arriere{
+	position: absolute;	
+	top: 8em;
+	height : 40em;	
+	width : 40em;
+}
+#text{
+	position:relative;
+	text-outline: 10%;
+	left:10%;
+	width:200%;
+	z-index:10;
+	font-family: Helvetica;
+	font-size: 2em;
+	text-transform: uppercase;
+	line-height: 1.2em;
+	text-align: center;
+	color: gray;
+	font-style: italic;
+}
+#titre{
+	position:relative;
+	text-outline: 10%;
+	top: 60%;
+	left:10%;
+	height: 20%;
+	width:200%;
+	z-index:10;
+	font-family:'Roboto';
+	font-size: 4em;
+	text-transform: uppercase;
+	text-align: center;
+	color: yellow;
+	background-color: rgba(0,0,0, 0.7);
+}
+body{
+	margin:0;
+	padding:0;
+	background: url(rocks.jpg) no-repeat center fixed; 
+	-webkit-background-size: cover;
+	background-size: cover; 
+	z-index:1;
+
+}
+
+
+
+/*-------------------------------Footer-Ori---------------------------------*/
+#footer{
+	position: absolute; 
+	bottom: 0;
+	width: 100%; 
+	height: 07%;
+}
+
