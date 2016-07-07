@@ -12,12 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('article.ajoutArticle');
+	return view('article.ajoutArticle');
 });
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/profile/{id}', 'HomeController@profile');
+Route::get('/profile', 'HomeController@profile');
 Route::get('/profile/edit/{id}', 'HomeController@editProfile');
-Route::get('/profile/update/{id}', 'HomeController@updateProfile');
+Route::post('/profile/update/{id}', 'HomeController@updateProfile');
+Route::get('/profile/addImage/{id}', 'HomeController@addImageProfile');
+Route::post('/profile/saveImage/{id}', 'HomeController@saveImageProfile');
+Route::get('/profile/images/{id}', 'HomeController@userImages');
+Route::get('/profile/image/{id}', 'HomeController@profileImage');

@@ -1,45 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-<style type="text/css" media="screen">
-	#profile{
-		margin-top: 2rem;
-	}
-	.ui.link.list .item{
-		color: blue !important;
-		margin: 0.3rem 0 0.3rem 1rem;
-	}
-	.ui.teal.header{
-		text-align: center;
-		margin-top: 0.3rem;
-	}
-	#segment1{
-		margin-top: 0.3rem;
-		background-color: #58D3F7;
-	}
-	#segment2{
-		margin-top: 0.3rem;
-		background-color: #58D3F7;
-	}
-	#segment3{
-		margin-top: 0.3rem;
-		background-color: #58D3F7;
-	}
-	.ui.segments>.ui.segments{
-		background-color: white;
-	}
-	#segment2 form{
-		width: 93%;
-		margin-right: auto;
-		margin-left: auto;
-		margin-bottom: 0.5rem;
-	}
-	@media only screen and (max-width: 767px){
-		.ui.stackable.two.column.row .column{
-			padding: 0 1rem !important;
-		}
-	}
-</style>
 
 <div id="profile" class="ui centered grid">
 	<div class="two column row">
@@ -112,7 +73,7 @@
 					</div>
 				</div>
 				<div class="ui center aligned extra content">
-					<a class="ui basic green button">Charger une image</a>
+					<a href="/profile/addImage/{{$user->id}}" class="ui basic green button">Charger une image</a>
 				</div>
 			</div>
 		</div>
