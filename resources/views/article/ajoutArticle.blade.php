@@ -1,6 +1,8 @@
-@include('parts.header')
-<div class="ui huge form">
-  <div class="two fields">
+@extends('layouts.main')
+@section('content')
+
+<div class="ui medium form">
+  <div class="four fields">
     <div class="field">
       <label>Nom de l'article</label>
       <input placeholder="article" type="text">
@@ -36,3 +38,4 @@
   </div>
   <div class="ui submit button">Submit</div>
 </div>
+@endsection

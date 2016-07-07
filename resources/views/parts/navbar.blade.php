@@ -1,3 +1,4 @@
+
 <div class="ui menu">
 	<a class="item" href="/">Accueil</a>
 	<div class="ui dropdown item">
@@ -21,7 +22,6 @@
 		</form>
 	</div>
 </div>
-
 
 
 
