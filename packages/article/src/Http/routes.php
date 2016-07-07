@@ -16,7 +16,7 @@ Route::group(['prefix' => 'article'], function () {
 	Route::controller('/', 'Article\Controller\ProductController');
 });
 // chemin à la racine vers la vue de la liste des articles
-Route::get('/', 'Article\Controller\ProductController@listProduct');
+// Route::get('/', 'Article\Controller\ProductController@listProduct');
 // Liste des articles enregistées
 Route::get('/listeArticles', 'Article\Controller\ProductController@listProduct');
 // engistrer un nouvel article
