@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\User;
 use App\Order;
+use App\Deliver;
 
 use App\Http\Requests;
 
@@ -45,5 +46,32 @@ class AdminController extends Controller
     	$commande->statut = $req->input('statut');
     	$commande->save();
     	return redirect('/admin/commandes');
+    }
+
+    public function getLivraisons() {
+    	$livraisons = Deliver::all();
+    	return view('admin::livraisons')->with(['livraisons' => $livraisons]);
+    }
+
+    public function postLivraisons(Request $req) {
+    	$deliver = $req->except('_token');
+    	Deliver::create($deliver);
+    	return redirect('/admin/livraisons');
+    }
+
+    public function putLivraisons(Request $req) {
+    	$deliver = Deliver::find($req->input('id'));
+    	$deliver->type = $req->input('type');
+    	$deliver->description = $req->input('description');
+    	$deliver->montant = $req->input('montant');
+    	$deliver->condition = $req->input('condition');
+    	$deliver->save();
+    	return redirect('/admin/livraisons');
+    }
+
+    public function deleteLivraisons(Request $req) {
+    	$livraison = Deliver::find($req->input('id'));
+    	$livraison->delete();
+    	return redirect('/admin/livraisons');
     }
 }
