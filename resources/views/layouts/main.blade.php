@@ -7,9 +7,8 @@
 </head>
 <body>
 	@include('parts.navbar')
-	
 	@yield('content')
-
+	
 	@include('parts.footer')
 </body>
 </html>

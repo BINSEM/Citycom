@@ -1,0 +1,43 @@
+
+
+/*--------------------------------------User profile / binsem---------------------------------*/
+
+#profile{
+	margin-top: 2rem;
+}
+#profile .ui.stackable.two.column.row{
+	padding: 0;
+}
+.ui.link.list .item{
+	color: blue !important;
+	margin: 0.3rem 0 0.3rem 1rem;
+}
+.ui.teal.header{
+	text-align: center;
+	margin-top: 0.3rem;
+}
+#segment1{
+	background-color: #58D3F7;
+}
+#segment2{
+	margin-top: 0.3rem;
+	background-color: #58D3F7;
+}
+#segment3{
+	margin-top: 0.3rem;
+	background-color: #58D3F7;
+}
+.ui.segments>.ui.segments{
+	background-color: white;
+}
+#segment2 form{
+	width: 93%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0.5rem;
+}
+@media only screen and (max-width: 767px){
+	.ui.stackable.two.column.row .column{
+		padding: 0 1rem !important;
+	}
+}
