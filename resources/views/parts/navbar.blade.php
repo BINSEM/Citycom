@@ -13,12 +13,18 @@
 	<a class="item">Aide</a>
 	<div class="right menu">
 		<form class="ui form">
+			@if (Auth::guest())
 			<div class="item">
-				<input type="button" onClick="parent.location='/register'" class="ui fluid primary button" value="Inscription" /> 
+				<input type="button" onClick="parent.location='/register'" class="ui fluid primary button" value="Inscription" />
 				&nbsp;
 				&nbsp;
-				<input type="button" onClick="parent.location='/login'" class="ui fluid teal button" value="Connexion" />
+				<input type="button" onClick="parent.location='/login'" class="ui fluid teal button" value="Connection" />
 			</div>
+			@else
+			<div class="item">
+			<input type="button" onClick="parent.location='/logout'" class="ui fluid teal button" value="Déconnection" />
+			</div>
+			@endif
 		</form>
 	</div>
 </div>
