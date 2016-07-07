@@ -12,6 +12,6 @@
 */
 
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin'], function () {
 	Route::controller('/', 'Admin\Controller\AdminController');
 });
