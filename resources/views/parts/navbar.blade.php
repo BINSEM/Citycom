@@ -18,10 +18,14 @@
 	<div class="right menu">
 		<form class="ui form">
 			<div class="item">
-				<input type="button" onClick="parent.location='/register'" class="ui fluid gray button" value="Inscription" /> 
+			<div class="shake-chunk">
+				<input type="button" onClick="parent.location='/register'" class="ui fluid gray button" value="Inscription" />
+				</div> 
 				&nbsp;
 				&nbsp;
+				<div class="shake-little">
 				<input type="button" onClick="parent.location='/login'" class="ui fluid gray button" value="Connexion" />
+				</div>
 			</div>
 		</form>
 	</div>
