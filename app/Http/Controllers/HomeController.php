@@ -49,7 +49,7 @@ class HomeController extends Controller
         $userUpdate = $request->all();
         $user = User::find($id);
         $user->update($userUpdate);
-        return redirect('/profile/'.$user->id);
+        return redirect('/profile');
     }
 
     public function addImageProfile(Request $request, $id)
