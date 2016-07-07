@@ -11,6 +11,8 @@ use App\Http\Requests;
 
 class AdminController extends Controller
 {
+	private $statuses = ['payé', 'en traitement', 'en cours de livraison', 'livrée', 'annulé', 'remboursé'];
+
     public function getIndex() {
     	//
         return view('admin::main');
@@ -33,14 +35,12 @@ class AdminController extends Controller
     	return redirect('/admin/users');
     }
 
-    public function getCommandes($id) {
-    	if (!$id) {
-    		$commandes = Order::all();
-    		return view('admin::commandes')->with(['commandes' => $commandes]);
-    	}
+    public function getCommandes() {
+		$commandes = Order::all();
+		return view('admin::commandes')->with(['commandes' => $commandes, 'statuses' => $this->statuses]);
     }
 
-    public function updateCommand(Request $req) {
+    public function putCommand(Request $req) {
     	$commande = Order::find($req->input('id'));
     	$commande->statut = $req->input('statut');
     	$commande->save();
