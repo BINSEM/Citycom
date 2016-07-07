@@ -6,7 +6,7 @@
 
 <h1>Enregistrement d'un nouvel article</h1>
 <div class="ui grid">
-  <div class="five wide centered column">
+  <div class="seven wide centered column">
     <form method="POST" action="/nouvelArticle/" class="ui huge form">
       {{csrf_field()}}
       <div class="field">

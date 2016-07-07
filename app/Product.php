@@ -14,4 +14,6 @@ class Product extends Model
     protected $fillable = array('id', 'nom', 'description', 'prix', 'ref', 'stock', 'categorie', 'img');
 
     protected $dates = ['deleted_at'];
+
+    protected $SoftDeletes = true;
 }

@@ -49,6 +49,7 @@ class ProductController extends Controller
     public function deleteProduct(Request $req, $id){
         $article = Product::find($id);
         $article->SoftDeletes();
+        return view('article::listeArticle');
 
     } 
 

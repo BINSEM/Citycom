@@ -17,9 +17,9 @@ Route::group(['prefix' => 'article'], function () {
 });
 // chemin à la racine vers la vue de la liste des articles
 Route::get('/', 'Article\Controller\ProductController@listProduct');
-
+// Liste des articles enregistées
 Route::get('/listeArticles', 'Article\Controller\ProductController@listProduct');
-
+// engistrer un nouvel article
 Route::get('/ajoutArticle', function(){
 	return view('article::ajoutArticle');
 });
@@ -27,11 +27,11 @@ Route::get('/ajoutArticle', function(){
 Route::post('/nouvelArticle','Article\Controller\ProductController@postProduct');
 // récupérer les données d'un articles
 Route::get('/nouvelArticle/{id}', 'Article\Controller\ProductController@getProduct');
+
+Route::get('/vueArticle/{id}', 'Article\Controller\ProductController@getProduct');
 // vue d'édition d'un article
 Route::get('/editerArticle/{id}','Article\Controller\ProductController@editProduct');
 // modification d'un article
 Route::post('/vueArticle/{id}','Article\Controller\ProductController@updateProduct');
-// Liste des articles enregistées
-
 // Suppression d'un article (sauf dans la base données)
-Route::get('/suppression/{id}', 'Article\Controller\ProductController@deleteProduct');
+Route::get('/suppressionArticle/{id}', 'Article\Controller\ProductController@deleteProduct');

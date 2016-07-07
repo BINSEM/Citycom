@@ -1,10 +1,9 @@
 @include('parts.header')
 <div class="ui grid">
-  <div class="five wide centered column">
+  <div class="ten wide centered column">
     <form method="POST" action="/nouvelArticle/" class="ui huge form">
       <form method="POST" action="/vueArticle/{{$article->id}}" class="ui huge form">
         {{csrf_field()}}
-        <div class="two fields">
           <input name="id" placeholder="article" type="hidden" value="{{$article->id}}">    
           <div class="field">
             <label>Nom de l'article</label>
@@ -18,7 +17,6 @@
             <label>Prix</label>
             <input type="text" name="prix" placeholder="Prix" value="{{$article->prix}}">
           </div>
-        </div>
         <div class="field">
           <label>Référence</label>
           <input type="text" name="ref" placeholder="Référence" value="{{$article->ref}}">
