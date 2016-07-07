@@ -19,8 +19,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
     	@foreach($articles as $article)
+    <tr>
       <td>{{$article->id}}</td>
       <td>{{$article->nom}}</td>
       <td>{{$article->description}}</td>
@@ -29,7 +29,7 @@
       <td>{{$article->stock}}</td>
       <td>{{$article->categorie}}</td>
       <td>{{$article->img}}</td>
-      	@enforeach
     </tr>
+      	@endforeach
   </tbody>
 </table>

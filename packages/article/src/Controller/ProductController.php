@@ -54,6 +54,6 @@ class ProductController extends Controller
 
     public function listProduct(Request $req){
         $articles = Product::all();
-        return view('article::listeArticles', ['articles'=> $articles]);
+        return view('article::listeArticles')->with(['articles'=> $articles]);
     }
 }
