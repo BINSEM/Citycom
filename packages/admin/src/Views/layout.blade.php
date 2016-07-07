@@ -9,5 +9,6 @@
 	<section>
 		@yield('content')
 	</section>
+	@include('admin::scripts')
 </body>
 </html>
