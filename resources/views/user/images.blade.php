@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="ui center aligned extra content">
-			<a href="/profile/image/{{$img->id}}" class="ui basic green button">Charger une image</a>
+			<a href="/profile/image/{{$img->id}}" class="ui basic green button">Faire profil l'image </a>
 		</div>
 	</div>
 </div>

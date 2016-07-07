@@ -74,6 +74,7 @@
 				</div>
 				<div class="ui center aligned extra content">
 					<a href="/profile/addImage/{{$user->id}}" class="ui basic green button">Charger une image</a>
+					<a href="/profile/images/{{$user->id}}" class="ui basic blue button">Images</a>
 				</div>
 			</div>
 		</div>
