@@ -88,4 +88,13 @@ class HomeController extends Controller
         $user->save();
         return redirect('/profile');
     }
+
+    // -------------------------Orders---------------------------
+
+    public function orders()
+    {
+        $user = Auth::user();
+        $orders = $user->orders->all();
+        return view('user.orders', ['orders' => $orders]);
+    }
 }

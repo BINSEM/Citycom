@@ -9,4 +9,9 @@ class Order extends Model
     //
     protected $table = 'order';
 
+    public function user()
+    {
+        return $this->belongTo('App\User');
+    }
+
 }

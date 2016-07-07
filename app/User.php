@@ -24,7 +24,7 @@ class User extends Authenticatable
     'password', 'remember_token',
     ];
 
-    public function roles ()
+    public function roles()
     {
         return $this->belongsToMany('App\Role');
     }
@@ -41,5 +41,10 @@ class User extends Authenticatable
     public function adresses()
     {
         return $this->hasOne('App\Adresse');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
     }
 }

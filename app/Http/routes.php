@@ -29,6 +29,7 @@ Route::get('/profile/addImage/{id}', 'HomeController@addImageProfile');
 Route::post('/profile/saveImage/{id}', 'HomeController@saveImageProfile');
 Route::get('/profile/images/{id}', 'HomeController@userImages');
 Route::get('/profile/image/{id}', 'HomeController@profileImage');
+Route::get('/orders', 'HomeController@orders');
 
 /* ---------------------------------------------
  AdresseController

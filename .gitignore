@@ -4,3 +4,5 @@
 Homestead.yaml
 Homestead.json
 .env
+database/seeds/OrderTableSeeder.php
+database/seeds/RoleTableSeeder.php
