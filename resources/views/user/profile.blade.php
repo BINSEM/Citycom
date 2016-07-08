@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div id="profile" class="ui centered grid" style="margin: auto; margin-top: 6.5rem; left: 50%; background-color:white; width: 50%;">
+<div id="profile" class="ui centered grid" style="margin: auto; margin-top: 7rem; left: 50%; background-color:white; width: 50%;">
 
 	<div class="ui image" style="margin-top:1rem;">
 		<img class="ui medium circular image" src="{{ $user->avatar->path or Gravatar::get(Auth::user()->email) }}">
