@@ -50,3 +50,4 @@
 
 
 @endsection
+    @include('parts.footer')
