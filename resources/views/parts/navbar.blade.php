@@ -69,7 +69,7 @@
 					</div>
 					@else
 					<div class="item">
-						<input type="button" onClick="parent.location='/logout'" class="ui fluid teal button" value="Déconnection" />
+						<input type="button" onClick="parent.location='/logout'" class="ui fluid yellow button" value="Déconnection" />
 					</div>
 				</form>
 				@endif
@@ -78,7 +78,6 @@
 		</div>
 	</div>
 </div>
-
 
 
 
