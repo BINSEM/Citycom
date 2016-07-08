@@ -24,6 +24,10 @@ class User extends Authenticatable
     'password', 'remember_token',
     ];
 
+    public function roles()
+    {
+        return $this->belongsToMany('App\Role');
+    }
     public function images()
     {
         return $this->morphMany('App\Image', 'imageable');
@@ -32,5 +36,15 @@ class User extends Authenticatable
     public function avatar()
     {
         return $this->hasOne('App\Image', 'id', 'avatar_id');
+    }
+
+    public function adresses()
+    {
+        return $this->hasOne('App\Adresse');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
     }
 }

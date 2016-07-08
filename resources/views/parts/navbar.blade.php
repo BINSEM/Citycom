@@ -1,33 +1,84 @@
 
+<div class="ui stackable grid">
+	<div class="computer tablet only row" id="oriheader">
+		<div class="ui fixed menu grid">
+			<a class="item" href="/">Accueil</a>
+			<div class="ui dropdown item">
+				Catégories
+				<i class="dropdown icon"></i>
+				<div class="ui menu">
+					<a class="item">Gros Cailloux</a>
+					<a class="item">Moyens Cailloux</a>
+					<a class="item">Petits Cailloux</a>
+				</div>
+			</div>
+			<a class="item">Aide</a>
+			<div class="right menu">
 
-<div class="ui grid">
-  <div class="computer tablet only row">
-    <div class="ui  fixed menu  grid">
+				@if (Auth::guest())
+				<form class="ui form">
+					<div class="item">
+						<div class="shake-chunk">
+							<input type="button" onClick="parent.location='/register'" class="ui fluid yellow button" value="Inscription" />
+						</div> 
+						&nbsp;
+						&nbsp;
+						<div class="shake-little">
+							<input type="button" onClick="parent.location='/login'" class="ui fluid yellow button" value="Connection" />
+						</div>
+					</div>
+					@else
+					<div class="item">
+						<input type="button" onClick="parent.location='/logout'" class="ui fluid teal button" value="Déconnection" />
+					</div>
+				</form>
+				@endif
 
-	<a class="item" href="/">Accueil</a>
-	<div class="ui dropdown item">
-		Categories
-		<i class="dropdown icon"></i>
-		<div class="ui menu">
-			<a class="item">Gros Cailloux</a>
-			<a class="item">Moyens Cailloux</a>
-			<a class="item">Petits Cailloux</a>
+			</div>
 		</div>
 	</div>
-	<a class="item">Aide</a>
-	<div class="right menu">
-		<form class="ui form">
-			<div class="item">
-				<input type="button" onClick="parent.location='/register'" class="ui fluid gray button" value="Inscription" /> 
-				&nbsp;
-				&nbsp;
-				<input type="button" onClick="parent.location='/login'" class="ui fluid gray button" value="Connexion" />
+
+
+
+	<div class="ui vertical navbar menu" >
+		<div class="ui fixed menu grid">
+			<a class="item" href="/">Accueil</a>
+			<div class="ui dropdown item">
+				<i class="dropdown icon"></i>
+				Catégories
+				<div class="ui menu">
+					<a class="item">Gros Cailloux</a>
+					<a class="item">Moyens Cailloux</a>
+					<a class="item">Petits Cailloux</a>
+				</div>
 			</div>
-		</form>
+			<a class="item">Aide</a>
+			<div class="right menu">
+
+				@if (Auth::guest())
+				<form class="ui form">
+					<div class="item">
+						<div class="shake-chunk">
+							<input type="button" onClick="parent.location='/register'" class="ui fluid yellow button" value="Inscription" />
+						</div> 
+						&nbsp;
+						&nbsp;
+						<div class="shake-little">
+							<input type="button" onClick="parent.location='/login'" class="ui fluid yellow button" value="Connection" />
+						</div>
+					</div>
+					@else
+					<div class="item">
+						<input type="button" onClick="parent.location='/logout'" class="ui fluid teal button" value="Déconnection" />
+					</div>
+				</form>
+				@endif
+
+			</div>
+		</div>
 	</div>
 </div>
-</div>
-</div>
+
 
 
 
