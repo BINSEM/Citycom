@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div id="profile" class="ui centered grid">
+<div id="profile" class="ui centered grid" style="margin-top:6.5rem;">
 	<div class="two column row">
 		<div class="ten wide column">
 			<div class="ui grid">
