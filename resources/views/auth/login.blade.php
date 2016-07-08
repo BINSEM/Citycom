@@ -1,11 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="ui grid" >
+<div class="ui grid" id="fondlogin">
                 &nbsp;
                 &nbsp;
 
-<div class="three column row">
+<div class="three column row" >
      <div class="centered floated column"id="connection">
      <div class="ui header">Se connecter au Royaume de la Caillasse</div>
         <form class="ui form" role="form" method="POST" action="{{ url('/login') }}">
@@ -40,7 +40,6 @@
                 <i class="signin"></i> 
             </input>
 
-<!--             <a class="ui button" href="{{ url('/password/reset') }}">Vous avez oublié votre mot de passe?</a> -->
 
         </form>
     </div>

@@ -5,9 +5,10 @@
 			Pour vous, <br />
 			les plus beaux cailloux
 		</div>
-		<div id="titre">
+		<h3 id="titre">
 			au royaume de la caillasse
-		</div>
+		</h3>
+		<a href="/" id="admirez">notre collection de cailloux</a>
 	</div>
 
 
