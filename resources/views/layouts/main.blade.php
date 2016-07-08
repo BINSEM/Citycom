@@ -11,13 +11,23 @@
 	
 	@include('parts.footer')
 
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="/assets/jquery/jquery.min.js"></script>
-<script src="/assets/js/semantic.min.js"></script>
-<script src="/assets/js/app.js"></script>
-<script type="text/javascript">
-	$('.ui.dropdown').dropdown();
-</script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="/assets/jquery/jquery.min.js"></script>
+	<script src="/assets/js/semantic.min.js"></script>
+	<script src="/assets/js/app.js"></script>
+	<script type="text/javascript">
+		$('.ui.dropdown').dropdown();
+		$(document).ready(function(){
+			$('.right.menu').on("click",function(e){
+				e.preventDefault();
+				$('.ui.vertical.menu').toggle();
+			});
+
+			$('.ui.dropdown').dropdown();
+		});
+	</script>
+
 
 </body>
+</html>
 </html>
