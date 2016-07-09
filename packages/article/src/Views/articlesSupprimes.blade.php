@@ -17,7 +17,8 @@
           <th>Prix</th>
           <th>Référence</th>
           <th>Stock</th>
-          <th>Categorie</th>
+          <th>Type</th>
+          <th>Couleur</th>
           <th>Image</th>
           <th>Détails</th>
           <th>Restaurer</th>
@@ -33,6 +34,8 @@
           <td>{{$articleSup->prix}}</td>
           <td>{{$articleSup->ref}}</td>
           <td>{{$articleSup->stock}}</td>
+          <td>{{$articleSup->type}}</td>
+          <td>{{$articleSup->couleur}}</td>
           <td>{{$articleSup->categorie}}</td>
           <td><img src="/images/{{$articleSup->img}}" width="60" alt="{{$articleSup->description}}"></td>
           <td><a href="/articleSup/{{$articleSup->id}}" class="ui button"><i class="list layout icon"></i></a></td>

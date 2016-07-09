@@ -22,7 +22,8 @@ class ProductController extends Controller
     	$article->description = $req->input('description');
     	$article->prix = $req->input('prix');
         $article->ref = $req->input('ref');
-        $article->categorie = $req->input('categorie');
+        $article->categorie = $req->input('type');
+        $article->categorie = $req->input('couleur');
         $article->stock = $req->input('stock');
         $article->img = $req->input('img');
         $article->save();
