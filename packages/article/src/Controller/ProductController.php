@@ -48,13 +48,34 @@ class ProductController extends Controller
 
     public function deleteProduct(Request $req, $id){
         $article = Product::find($id);
-        $article->SoftDeletes();
-        return view('article::listeArticle');
+        $articles = Product::all();
+        $article->delete();
+        return redirect('/listeArticles')->with(['articles' => $articles, 'article' => $article]);
 
     } 
 
     public function listProduct(Request $req){
         $articles = Product::all();
         return view('article::listeArticles')->with(['articles'=> $articles]);
+    }
+
+    public function listDelete(Request $req){
+        $articlesSup = Product::onlyTrashed()->get();
+        return view('article::articlesSupprimes')->with(['articlesSup' => $articlesSup]);
+    }
+
+    public function productDeleted(Request $req, $id){
+        $articleSup = Product::onlyTrashed()->where($id)->get();
+        return view('article::articleSup')->with(['articleSup' => $articleSup]);
+    }
+
+    public function productRestore(Request $req, $id){
+        $articleSup = Product::withTrashed()->where($id)->restore();
+        return view('article::listeArticles')->with(['$articleSup' => $articleSup]);
+    }
+
+    public function deleteDef(Request $req, $id){
+        $article = Product::forceDelete($id);
+        return redirect('/articlesSupprimes');
     }
 }
