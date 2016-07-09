@@ -2,22 +2,23 @@
 
 @section('content')
 
-<div id="adresse" class="ui centered grid">
-	<a href="/adresse/add" class="ui basic black button">Add adresse</a>
-	<div class="three column row">
+<div id="adresse" class="ui centered grid" style="margin-top:6.5rem;">
+	<a href="/adresse/add" class="ui basic black button">Ajouter l'adresse</a>
+	<div class="three centered column row">
 		@foreach($adresses as $adresse)
 		<div class="four wide column">
 			<div class="ui grid">
 				<div class="ui row">
 					<div class="column">
-						<h4>Informations de profil</h4>
-						<div>
-							<p>Nom : {{$adresse->nom}}</p>
-							<p>Prenom : {{$adresse->prenom}}</p>
-							<p>Adress : {{$adresse->adresse}}</p>
-							<p>Code postal : {{$adresse->code_postal}}</p>
-							<p>Ville : {{$adresse->ville}}</p>
-							<p>Tel : {{$adresse->tel}}</p>
+						<div class="ui segment" style="margin:0.5rem;"">
+							<h4>Informations de adresse</h4>
+							<div class="ui divider"></div>
+							<p>Nom : <b>{{$adresse->nom}}</b></p>
+							<p>Prenom : <b>{{$adresse->prenom}}</b></p>
+							<p>Adress : <b>{{$adresse->adresse}}</b></p>
+							<p>Code postal : <b>{{$adresse->code_postal}}</b></p>
+							<p>Ville : <b>{{$adresse->ville}}</b></p>
+							<p>Tel : <b>{{$adresse->tel}}</b></p>
 							<a href="/adresse/edit/{{$adresse->id}}">edit</a>
 						</div>
 					</div>

@@ -43,5 +43,11 @@ Route::get('/orders', 'HomeController@orders');
  Route::post('/adresse/update/{id}', 'AdresseController@updateAdresse');
 
  /* ---------------------------------------------
+ CartController
+ ---------------------------------------------*/
+
+ Route::get('/cart', 'CartController@index');
+
+ /* ---------------------------------------------
  Controller
  ---------------------------------------------*/
