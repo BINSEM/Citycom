@@ -1,11 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="ui grid" >
+<div class="ui grid" id="fondlogin">
     &nbsp;
     &nbsp;
 
-    <div class="three column row">
+    <div class="three column row" >
        <div class="centered floated column"id="inscription">
            <div class="ui header">S'inscrire au Royaume de la Caillasse</div>
            <form class="ui form" role="form" method="POST" action="{{ url('/register') }}">
@@ -75,3 +75,4 @@
 </div>
 
 @endsection
+    @include('parts.footer')
