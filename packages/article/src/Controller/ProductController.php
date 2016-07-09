@@ -41,8 +41,7 @@ class ProductController extends Controller
 
     public function updateProduct(Request $req, $id){
         $articleUpdate = $req->except('_token');
-        $article = Product::find($id);
-        $article->update($articleUpdate);
+        $article = Product::find($id)->update()->save();
         return view('article::vueArticle', ['article'=> $article]);
     }
 
@@ -65,17 +64,18 @@ class ProductController extends Controller
     }
 
     public function productDeleted(Request $req, $id){
-        $articleSup = Product::onlyTrashed()->where($id)->get();
+        $articleSup = Product::onlyTrashed()->where('id', $id)->first();
         return view('article::articleSup')->with(['articleSup' => $articleSup]);
     }
 
     public function productRestore(Request $req, $id){
-        $articleSup = Product::withTrashed()->where($id)->restore();
-        return view('article::listeArticles')->with(['$articleSup' => $articleSup]);
+        $articleSup = Product::withTrashed()->where('id', $id)->first()->restore();
+        $articles = Product::all();
+        return view('article::listeArticles')->with(['articles' => $articles]);
     }
 
     public function deleteDef(Request $req, $id){
-        $article = Product::forceDelete($id);
+        $article = Product::withTrashed()->where('id', $id)->forceDelete();
         return redirect('/articlesSupprimes');
     }
 }

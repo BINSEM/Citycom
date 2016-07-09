@@ -6,7 +6,7 @@
 </div>
 
 <h1>Liste des articles</h1>
-<div class="ui grid">
+<div class="ui stackable grid">
   <div class="twelve wide centered column">
     <table class="ui selectable celled table">
       <thead>
@@ -17,7 +17,8 @@
           <th>Prix</th>
           <th>Référence</th>
           <th>Stock</th>
-          <th>Categorie</th>
+          <th>Type</th>
+          <th>Couleur</th>
           <th>Image</th>
           <th>Détails</th>
           <th>Supprimer</th>
@@ -32,7 +33,8 @@
           <td>{{$article->prix}}</td>
           <td>{{$article->ref}}</td>
           <td>{{$article->stock}}</td>
-          <td>{{$article->categorie}}</td>
+          <td>{{$article->type}}</td>
+          <td>{{$article->couleur}}</td>
           <td><img src="/images/{{$article->img}}" width="60" alt="{{$article->description}}"></td>
           <td>
             <a href="/vueArticle/{{$article->id}}" class="ui button"><i class="list layout icon"></i></a>
