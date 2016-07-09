@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Citycom</title>
+	<!-- <meta name="viewport" content="width=device-width, user-scalable=no"> -->
+<meta name="viewport" content="initial-scale=1, user-scalable=yes, width=device-width">
 	@include('parts.header')
 </head>
 <body>
