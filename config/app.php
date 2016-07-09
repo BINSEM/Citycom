@@ -161,7 +161,8 @@ return [
         */
         Admin\Http\Providers\AdminServiceProvider::class,
         Article\Http\Providers\ArticleServiceProvider::class,
-        Order\Http\Providers\OrderServiceProvider::class
+        Order\Http\Providers\OrderServiceProvider::class,
+        Baum\Providers\BaumServiceProvider::class
 
     ],
 

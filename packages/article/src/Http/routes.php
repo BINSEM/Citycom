@@ -34,4 +34,12 @@ Route::get('/editerArticle/{id}','Article\Controller\ProductController@editProdu
 // modification d'un article
 Route::post('/vueArticle/{id}','Article\Controller\ProductController@updateProduct');
 // Suppression d'un article (sauf dans la base données)
-Route::get('/suppressionArticle/{id}', 'Article\Controller\ProductController@deleteProduct');
+Route::get('/supprimer/{id}', 'Article\Controller\ProductController@deleteProduct');
+// vue de la liste des articles supprimés
+Route::get('/articlesSupprimes', 'Article\Controller\ProductController@listDelete');
+// vue de l'article supprimé
+Route::get('/articleSup/{id}', 'Article\Controller\ProductController@productDeleted');
+// restaurer unn article
+Route::get('/restaurer/{id}', 'Article\Controller\ProductController@productRestore');
+// suppression définitive d'un article
+Route::get('/supprDef/{id}', 'Article\Controller\ProductController@deleteDef');
