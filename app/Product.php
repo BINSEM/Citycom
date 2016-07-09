@@ -16,4 +16,8 @@ class Product extends Model
     protected $dates = ['deleted_at'];
 
     protected $SoftDeletes = true;
+
+    public function carts(){
+    	return $this->hasMany('App\Cart');
+    }
 }

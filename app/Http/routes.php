@@ -11,6 +11,13 @@
 |
 */
 
+Route::group(['middleware'=>'web'], function(){
+	 Route::get('/cart/test', 'CartController@index');
+	 Route::get('/cart', 'CartController@cart');
+	 Route::post('cart/post/{id}', 'CartController@postCart');
+	 Route::post('cart/delete', 'CartController@deleteCart');
+});
+
 Route::get('/', function () {
 	return view('home');
 });
@@ -45,7 +52,6 @@ Route::get('/orders', 'HomeController@orders');
  CartController
  ---------------------------------------------*/
 
- Route::get('/cart', 'CartController@index');
 
  /* ---------------------------------------------
  Controller
