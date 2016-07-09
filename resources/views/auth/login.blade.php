@@ -6,13 +6,13 @@
                 &nbsp;
 
 <div class="three column row" >
-     <div class="centered floated column"id="connection">
+     <div class="centered floated column" id="connection">
      <div class="ui header">Se connecter au Royaume de la Caillasse</div>
         <form class="ui form" role="form" method="POST" action="{{ url('/login') }}">
             {{ csrf_field() }}
 
-            <div class="field{{ $errors->has('email') ? ' has-error' : '' }}">
-                <label for="email">Email</label>
+            <div class="ui form{{ $errors->has('email') ? ' has-error' : '' }}">
+                <label id="labelori"for="email">Email</label>
 
                 <input id="email" type="email" name="email" value="{{ old('email') }}">
 
@@ -23,8 +23,8 @@
                 @endif
             </div>
 
-            <div class="field{{ $errors->has('password') ? ' has-error' : '' }}">
-                <label for="password">Mot de passe</label>
+            <div class="ui form{{ $errors->has('password') ? ' has-error' : '' }}">
+                <label id="labelori"for="password">Mot de passe</label>
                 <input id="password" type="password" name="password">
 
                 @if ($errors->has('password'))

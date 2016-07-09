@@ -1,7 +1,7 @@
 
 <div class="ui stackable grid">
 	<div class="computer tablet only row" id="oriheader">
-		<div class="ui fixed menu grid">
+		<div class="ui stackable fixed menu grid">
 			<a class="item" href="/">Accueil</a>
 			<div class="ui dropdown item">
 				Catégories
