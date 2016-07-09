@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Panel Administrateur</title>
 	@include('parts.header')
+	<link rel="stylesheet" href="/assets/css/admin.css">
 </head>
 <body>
 	<nav class="ui breadcrumb">
@@ -11,7 +12,7 @@
 		<span class="divider">|</span>
 		<a href="/">Retour au magasin</a>
 	</nav>
-	<section>
+	<section class="ui padded grid">
 		@yield('content')
 	</section>
 	@include('admin::scripts')
