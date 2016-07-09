@@ -1,3 +1,8 @@
+<div class="ui vertical pointing menu">
+  <a href="/listeArticles" class="item">Liste des articles </a>
+  <a href="/ajoutArticle" class="item">Ajouter un article </a>
+  <a href="/articlesSupprimes" class="item">Articles supprimés </a>
+</div>
 @include('parts.header')
 <div class="ui grid">
   <div class="ten wide centered column">
