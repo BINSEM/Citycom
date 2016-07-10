@@ -48,6 +48,7 @@ Route::group(['middleware' => 'web'], function(){
 			session()->flash('message', 'Inscrivez vous pour poursuivre vos achats.');
 			return redirect('/register');
 		}
+		session()->flash('message', 'Votre commande a bien été enregistrée');
 		return redirect('/commande');
 	});
 	Route::get('/commande', function(){

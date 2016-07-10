@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
 @section('content')
-
 <h1></h1>
-<h1></h1>
-<h1>Votre commande a bien été enregistrée</h1>
+@if(session()->has('message'))
+<h1>{{session()->get('message')}}</h1>
+@endif
 
 @endsection
