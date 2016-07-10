@@ -30,11 +30,11 @@
       <div class="two fields">
         <div class="field">
           <label>Couleur</label>
-          <input type="text" name="couleur" placeholder="Catégorie">
+          <input type="text" name="couleur" placeholder="Couleur" value="{{$article->couleur}}">
         </div>
         <div class="field">
           <label>Type</label>
-          <input type="text" name="type" placeholder="Catégorie">
+          <input type="text" name="type" placeholder="Type" value="{{$article->type}}">
         </div>
       </div> 
         <div class="field">
