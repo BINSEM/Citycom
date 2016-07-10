@@ -79,7 +79,7 @@
 						</div>
 						<div class="extra content">
 							<i class="shop icon"></i>
-							<a onClick="parent.location='/addcart'">
+							<a onClick="parent.location='/post'">
 								Ajouter au panier
 							</a>			
 							<br />			
