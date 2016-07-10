@@ -6,14 +6,14 @@
 	<h1 class="ui centered header">Paneau de l'Administrateur</h1>
 </div>
 
-<div class="ui ten wide centered column">
-	<ul class="ui centered list">
-		<li><a href="/admin/users">Gestion des utilisateurs</a></li>
-		<li><a href="/admin/categories">Ajouter/Supprimer des catégories</a></li>
-		<li><a href="/article">Ajouter/Supprimer des articles</a></li>
-		<li><a href="/admin/paiements">Ajouter/Supprimer des moyens de paiement</a></li>
-		<li><a href="/admin/livraisons">Ajouter/Supprimer des modes de livraison</a></li>
-		<li><a href="/admin/commandes">Suivi des commandes</a></li>
+<div class="ui four wide centered column">
+	<ul class="ui relaxed centered list">
+		<div class="item"><a href="/admin/users">Gestion des utilisateurs</a></div>
+		<div class="item"><a href="/admin/categories">Ajouter/Supprimer des catégories</a></div>
+		<div class="item"><a href="/article">Ajouter/Supprimer des articles</a></div>
+		<div class="item"><a href="/admin/paiements">Ajouter/Supprimer des moyens de paiement</a></div>
+		<div class="item"><a href="/admin/livraisons">Ajouter/Supprimer des modes de livraison</a></div>
+		<div class="item"><a href="/admin/commandes">Suivi des commandes</a></div>
 	</ul>
 </div>
 

@@ -28,7 +28,10 @@
 				Prix: {{$articleSup->prix}}
 			</div>
 			<div class="meta">
-				Catégorie: {{$articleSup->categorie}}
+				Type: {{$articleSup->type}}
+			</div>
+			<div class="meta">
+				Catégorie: {{$articleSup->couleur}}
 			</div>
 			<div class="meta">
 				Stock: {{$articleSup->stock}}

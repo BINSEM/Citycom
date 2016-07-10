@@ -13,7 +13,8 @@ class UpdateProductsTable extends Migration
     public function up()
     {
         Schema::table('product', function (Blueprint $table) {
-            $table->string('categorie')->delete();
+        $table->string('nom')->change();
+        $table->string('img')->change();
         });
     }
 
