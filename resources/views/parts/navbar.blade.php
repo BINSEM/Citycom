@@ -15,6 +15,7 @@
 			<a class="item">
 			    <i class="shop icon"></i>
 Panier</a>
+
 			<div class="right menu">
 
 				@if (Auth::guest())
