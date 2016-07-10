@@ -26,9 +26,9 @@
 				</tr>
 			</tbody>
 		</table>
-		<form action="/cart/command" method="post" >
+		<form action="/panier" method="post" >
 			{{ csrf_field() }}
-			<button type="submit" class="ui yellow button right floated" formmethod="post" formaction="/cart/command">Commander</button>
+			<button type="submit" class="ui yellow button right floated" formmethod="post" formaction="/panier">Commander</button>
 		</form>
 		<form action="/cart/delete" method="post" accept-charset="utf-8">
 			{{ csrf_field() }}
