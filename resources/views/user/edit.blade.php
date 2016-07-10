@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div id="profile" class="ui segment" style="margin: auto; margin-top: 7rem;  background-color:white; width: 50%;">
+<div id="profile_edit" class="ui segment">
 	<h2>Editer votre profil</h2>
 	<form class="ui form" action="/profile/update/{{$user->id}}" method="POST">
 		{{ csrf_field() }}
