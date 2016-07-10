@@ -14,7 +14,7 @@
 		<span class="divider"> | </span>
 		<a href="/">Retour au magasin</a>
 	</nav>
-	<section class="ui padded grid">
+	<section class="ui stackable padded grid">
 		@yield('content')
 	</section>
 	@include('admin::scripts')

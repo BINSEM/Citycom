@@ -29,6 +29,7 @@
 						<div class="shake-little">
 							<input type="button" onClick="parent.location='/login'" class="ui fluid yellow button" value="Connection" />
 						</div>
+<<<<<<< HEAD
 					</div>
 					@else
 					<div class="item">
@@ -36,6 +37,15 @@
 					</div>
 				</form>
 				@endif
+=======
+						@if(Auth::check() && (Auth::user()->roles->contains('nom', 'admin')))
+						<div class="item">
+							<input type="button" onClick="parent.location='/admin'" class="ui fluid red button" value="Administration" />
+						</div>
+						@endif
+					</form>
+					@endif
+>>>>>>> 22693415a465b42bcc01d825bd4a5ea30736b7ce
 
 			</div>
 		</div>
