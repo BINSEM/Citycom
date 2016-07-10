@@ -15,3 +15,6 @@
 Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin'], function () {
 	Route::controller('/', 'Admin\Controller\AdminController');
 });
+Route::get('/magasin', function(){
+	return 'Magasin';
+});
