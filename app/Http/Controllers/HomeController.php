@@ -103,4 +103,10 @@ class HomeController extends Controller
         $orders = $user->orders->all();
         return view('user.orders', ['orders' => $orders]);
     }
+
+
+    public function contact()
+    {
+        return view('layouts.contact');
+    }
 }

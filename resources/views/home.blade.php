@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div id="arriere" >
+<div id="arriere" alt="photo de fond n/b, personne gravissant une montagne">
 	<div id="text">
 		Venus du bout du monde, 
 		Pour vous, <br />

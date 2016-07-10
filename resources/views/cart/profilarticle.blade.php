@@ -43,5 +43,7 @@
 		{{ csrf_field() }}
 
 		<button type="submit" formaction="/cart/post/{{$product->id}}" formmethod="post" class="ui yellow tiny labeled icon button"><i class="shop icon"></i>Ajouter au panier</button>			
+		<a href="/" class="ui yellow tiny labeled icon button">
+		<i class="home icon"></i>Revenir aux articles</a>
 	</form>
-</div>
+	</div>

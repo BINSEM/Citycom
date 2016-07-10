@@ -44,6 +44,7 @@ Route::auth();
  Route::get('/profile/images/{id}', 'HomeController@userImages');
  Route::get('/profile/image/{id}', 'HomeController@profileImage');
  Route::get('/orders', 'HomeController@orders');
+ Route::get('/contact', 'HomeController@contact');
 
 /* ---------------------------------------------
  AdresseController
