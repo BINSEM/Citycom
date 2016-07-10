@@ -45,3 +45,5 @@ Route::get('/restaurer/{id}', 'Article\Controller\ProductController@productResto
 Route::get('/supprDef/{id}', 'Article\Controller\ProductController@deleteDef');
 // vue de la listes des articles selon la catégorie sélectionnées
 Route::get('/articlesCategorie', 'Article\Controller\ProductController@getCategorie');
+// liste des articles selon les catégories choisies
+Route::get('/listeArticles', 'Article\Controller\ProductController@getCategorie');

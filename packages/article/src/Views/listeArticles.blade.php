@@ -1,27 +1,46 @@
-@include('parts.header')
-<div class="ui vertical pointing menu">
-  <a href="/listeArticles" class="item">Liste des articles </a>
-  <a href="/ajoutArticle" class="item">Ajouter un article </a>
-  <a href="/articlesSupprimes" class="item">Articles supprimés </a>
-</div>
-<div class="ui form">
-  <div class="field">
-      <label>Type</label>
-      <div class="ui selection dropdown">
-          <input type="hidden" name="gender">
-          <i class="dropdown icon"></i>
-          <div class="default text">Type</div>
-          <div class="menu">
-              <div class="item" data-value="1">Galet</div>
-              <div class="item" data-value="0">Caillou</div>
-              <div class="item" data-value="0">Roche</div>
-              <div class="item" data-value="0">Autres</div>
+@extends('article::main')
+@section('content')
+<div class="ui stackable grid">
+  <div class="seven wide centered column">
+    <form class="ui form" method="get" action="/listeArticles">
+      <div class="two fields">
+        <div class="field">
+          <label>Type</label>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="type">
+            <i class="dropdown icon"></i>
+            <div class="default text">Type</div>
+            <div class="menu">
+              <div class="item" data-value="galet">Galet</div>
+              <div class="item" data-value="caillou">Caillou</div>
+              <div class="item" data-value="roche">Roche</div>
+              <div class="item" data-value="autre">Autres</div>
+            </div>
           </div>
-      </div>
+        </div>
+        <div class="field">
+          <label>Couleur</label>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="couleur">
+            <i class="dropdown icon"></i>
+            <div class="default text">Type</div>
+            <div class="menu">
+              <div class="item" data-value="gris">Gris</div>
+              <div class="item" data-value="noir">Noir</div>
+              <div class="item" data-value="rose">Rose</div>
+              <div class="item" data-value="bleu">Bleu</div>
+              <div class="item" data-value="multicolor">Multicolor</div>
+            </div>
+          </div>
+        </div>
+      </div>   
+      <button class="ui button" type="submit">Rechercher</button>
+    </form>
   </div>
 </div>
 
-<h1>Liste des articles</h1>
+<h1>{{count($articles)}} articles</h1>
+
 <div class="ui stackable grid">
   <div class="twelve wide centered column">
     <table class="ui selectable celled table">
@@ -64,3 +83,5 @@
     </table>
   </div>
 </div>
+
+@endsection
