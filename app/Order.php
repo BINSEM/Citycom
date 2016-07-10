@@ -9,6 +9,8 @@ class Order extends Model
     //
     protected $table = 'order';
 
+    protected $fillable = ['user_id'];
+
     public function user()
     {
         return $this->belongTo('App\User');
