@@ -6,7 +6,7 @@ $(document).ready(function(){
 	console.log(window.location);
 	if(visited){
 		if (window.location.pathname == "/"){
-			window.location = "/magasin";
+			window.location = "/cart/test";
 		}
 	} else {
 		localStorage.setItem('visited', true);
