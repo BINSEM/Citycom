@@ -79,4 +79,11 @@ class ProductController extends Controller
         $article = Product::withTrashed()->where('id', $id)->forceDelete();
         return redirect('/articlesSupprimes');
     }
+
+    public function getCategorie(Request $req, $type, $couleur){
+        $articlesCat = Product::where('type', $type)->first();
+        $articles = Product::all();
+        return view('article::listeArticles')->with(['articles' => $articles]);
+
+    }
 }
