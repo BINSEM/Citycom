@@ -15,24 +15,19 @@
 			<a href="/panier" class="item">
 				<i class="shop icon"></i>
 				Panier
-				<br>@if (isset($carts)) {{$carts}} Produits {{$total}} &euro; @endif</a>
-				<div class="right menu">
+			</a>
+			<div class="right menu">
 
-					@if (Auth::guest())
-					<form class="ui form">
-						<div class="item">
-							<div class="shake-chunk">
-								<input type="button" onClick="parent.location='/register'" class="ui fluid yellow button" value="Inscription" />
-							</div> 
-							&nbsp;
-							&nbsp;
-							<div class="shake-little">
-								<input type="button" onClick="parent.location='/login'" class="ui fluid yellow button" value="Connection" />
-							</div>
-						</div>
-						@else
-						<div class="item">
-							<input type="button" onClick="parent.location='/logout'" class="ui fluid teal button" value="Déconnection" />
+				@if (Auth::guest())
+				<form class="ui form">
+					<div class="item">
+						<div class="shake-chunk">
+							<input type="button" onClick="parent.location='/register'" class="ui fluid yellow button" value="Inscription" />
+						</div> 
+						&nbsp;
+						&nbsp;
+						<div class="shake-little">
+							<input type="button" onClick="parent.location='/login'" class="ui fluid yellow button" value="Connection" />
 						</div>
 						@if(Auth::check() && (Auth::user()->roles->contains('nom', 'admin')))
 						<div class="item">
@@ -41,7 +36,6 @@
 						@endif
 					</form>
 					@endif
-
 				</div>
 			</div>
 		</div>
@@ -92,6 +86,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 
 
 
