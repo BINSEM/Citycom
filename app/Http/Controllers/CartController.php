@@ -16,7 +16,8 @@ class CartController extends Controller
 	{
 		$products = Product::all();
 		$carts = $request->session()->get('cart');
-		if(count($carts) > 0){
+		// dd($carts);
+		if($carts != "" && count($carts) > 0){
 			$sum = [];
 			foreach($carts as $cart) {
 				array_push($sum, $cart['prix']);
