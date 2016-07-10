@@ -13,80 +13,80 @@
 				</div>
 			</div>
 			<a class="item">
-			    <i class="shop icon"></i>
-Panier</a>
+				<i class="shop icon"></i>
+				Panier
+				<br>{{$carts}} Produits  {{$total}} &euro;</a>
+				<div class="right menu">
 
-			<div class="right menu">
-
-				@if (Auth::guest())
-				<form class="ui form">
-					<div class="item">
-						<div class="shake-chunk">
-							<input type="button" onClick="parent.location='/register'" class="ui fluid yellow button" value="Inscription" />
-						</div> 
-						&nbsp;
-						&nbsp;
-						<div class="shake-little">
-							<input type="button" onClick="parent.location='/login'" class="ui fluid yellow button" value="Connection" />
+					@if (Auth::guest())
+					<form class="ui form">
+						<div class="item">
+							<div class="shake-chunk">
+								<input type="button" onClick="parent.location='/register'" class="ui fluid yellow button" value="Inscription" />
+							</div> 
+							&nbsp;
+							&nbsp;
+							<div class="shake-little">
+								<input type="button" onClick="parent.location='/login'" class="ui fluid yellow button" value="Connection" />
+							</div>
 						</div>
-					</div>
-					@else
-					<div class="item">
-						<input type="button" onClick="parent.location='/logout'" class="ui fluid teal button" value="Déconnection" />
-					</div>
-				</form>
-				@endif
+						@else
+						<div class="item">
+							<input type="button" onClick="parent.location='/logout'" class="ui fluid teal button" value="Déconnection" />
+						</div>
+					</form>
+					@endif
 
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="ui stackable grid">
-	<div class="mobile only row">
-		<div class="ui fixed menu">
-			<div class="ui vertical menu" >
-				<div class="ui menu ori ">
-					<a class="item" href="/">Accueil</a>
-					<div class="ui dropdown item">
-						<i class="dropdown icon"></i>
-						Catégories
-						<div class="ui menu">
-							<a class="item">Gros Cailloux</a>
-							<a class="item">Moyens Cailloux</a>
-							<a class="item">Petits Cailloux</a>
+	<div class="ui stackable grid">
+		<div class="mobile only row">
+			<div class="ui fixed menu">
+				<div class="ui vertical menu" >
+					<div class="ui menu ori ">
+						<a class="item" href="/">Accueil</a>
+						<div class="ui dropdown item">
+							<i class="dropdown icon"></i>
+							Catégories
+							<div class="ui menu">
+								<a class="item">Gros Cailloux</a>
+								<a class="item">Moyens Cailloux</a>
+								<a class="item">Petits Cailloux</a>
+							</div>
 						</div>
-					</div>
-					<a class="item">Panier</a>
-					<div class="right menu">
+						<a class="item">Panier</a>
+						<div class="right menu">
 
-						@if (Auth::guest())
-						<form class="ui form">
-							<div class="item">
-							<div class="ui vertical buttons">
-								<div class="shake-chunk">
-									<input type="button" onClick="parent.location='/register'" class="ui mini yellow button" value="Inscription" />
-								</div> 
-								&nbsp;
-								&nbsp;
-								<div class="shake-little">
-									<input type="button" onClick="parent.location='/login'" class="ui fluid mini yellow button" value="Connection" />
+							@if (Auth::guest())
+							<form class="ui form">
+								<div class="item">
+									<div class="ui vertical buttons">
+										<div class="shake-chunk">
+											<input type="button" onClick="parent.location='/register'" class="ui mini yellow button" value="Inscription" />
+										</div> 
+										&nbsp;
+										&nbsp;
+										<div class="shake-little">
+											<input type="button" onClick="parent.location='/login'" class="ui fluid mini yellow button" value="Connection" />
+										</div>
+									</div>
 								</div>
-							</div>
-							</div>
-							@else
-							<div class="item">
-								<input type="button" onClick="parent.location='/logout'" class="ui fluid mini yellow button" value="Déconnection" />
-							</div>
-						</form>
-						@endif
+								@else
+								<div class="item">
+									<input type="button" onClick="parent.location='/logout'" class="ui fluid mini yellow button" value="Déconnection" />
+								</div>
+							</form>
+							@endif
 
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 
 
