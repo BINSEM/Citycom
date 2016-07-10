@@ -1,23 +1,21 @@
-@include('parts.header')
-<div class="ui vertical pointing menu">
-	<a href="/listeArticles" class="item">Liste des articles </a>
-	<a href="/ajoutArticle" class="item">Ajouter un article </a>
-	<a href="/articlesSupprimes" class="item">Articles supprimés </a>
-</div>
+@extends('article::main')
+@section('content')
 <!-- champ détail de l'article -->
-<h1>{{$article->nom}}</h1>
 
 <div class="ui centered internally celled grid">
 	<div class="row">
 		<div class="three wide column">
 			<div class="ui medium rounded image">
-				<img width="250" src="/images/{{$article->img}}">
+				<img width="300" src="/images/{{$article->img}}">
+				<h1>{{$article->nom}}</h1>
+				<a href="/editerArticle/{{$article->id}}"><button class="ui blue button"><i class="edit icon"></i>Modifier</button></a>
+				<a href="/supprimer/{{$article->id}}"><button class="ui button red"><i class="delete icon"></i>Supprimer</button></a>
 			</div>
 		</div>
-		<div class="height wide column">
-			<p>{{$article->description}}</p>
+		<div class="five wide column" style="background-color: rgba(205, 205, 205, 0.2);">
+			<h4>{{$article->description}}</h4>
 		</div>
-		<div class="three wide column">
+		<div class="three wide column" style="font-size:1.4em; line-height: 1.4;">
 			<div class="meta">
 				Identifiant: {{$article->id}}
 			</div>
@@ -38,9 +36,5 @@
 			</div>
 		</div>
 	</div>
-			<div class="ui button red">
-				<a href="/suppression/{{$article->id}}"><i class="delete icon"></i>Supprimer</a>
-			</div>
-			<div class="ui button">
-				<a href="/editerArticle/{{$article->id}}">Modifier</a>
-			</div>
+
+	@endsection

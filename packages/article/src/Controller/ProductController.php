@@ -42,7 +42,8 @@ class ProductController extends Controller
 
     public function updateProduct(Request $req, $id){
         $articleUpdate = $req->except('_token');
-        $article = Product::find($id)->update()->save();
+        $article = Product::where('id', $id)->get();
+        $article = Product::update();
         return view('article::vueArticle', ['article'=> $article]);
     }
 
@@ -80,10 +81,27 @@ class ProductController extends Controller
         return redirect('/articlesSupprimes');
     }
 
-    public function getCategorie(Request $req, $type, $couleur){
-        $articlesCat = Product::where('type', $type)->first();
-        $articles = Product::all();
+    public function getCategorie(Request $req){
+        $type = $req->input('type');
+        $couleur = $req->input('couleur');
+        if ($type && $couleur){
+            $articles = Product::where('type', $type)->where('couleur', $couleur)->get();
+        }
+
+        elseif($type){
+            $articles = Product::where('type', $type)->get();
+
+        }
+
+        elseif($couleur){
+            $articles = Product::where('couleur', $couleur)->get();
+        }
+
+        else{
+            $articles = Product::all();
+        }
         return view('article::listeArticles')->with(['articles' => $articles]);
+
 
     }
 }

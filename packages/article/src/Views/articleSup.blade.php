@@ -1,9 +1,5 @@
-@include('parts.header')
-<div class="ui vertical pointing menu">
-	<a href="/listeArticles" class="item">Liste des articles </a>
-	<a href="/ajoutArticle" class="item">Ajouter un article </a>
-	<a href="/articlesSupprimes" class="item">Articles supprimés </a>
-</div>
+@extends('article::main')
+@section('content')
 <!-- champ détail de l'article -->
 <h1>{{$articleSup->nom}}</h1>
 
@@ -44,3 +40,4 @@
 			<div class="ui button">
 				<a href="/editerArticle/{{$articleSup->id}}">Modifier</a>
 			</div>
+			@endsection

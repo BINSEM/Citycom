@@ -1,10 +1,5 @@
-@include('parts.header')
-<div class="ui vertical pointing menu">
-  <a href="/listeArticles" class="item">Liste des articles </a>
-  <a href="/ajoutArticle" class="item">Ajouter un article </a>
-  <a href="/articlesSupprimes" class="item">Articles supprimés </a>
-</div>
-
+@extends('article::main')
+@section('content')
 <h1>Liste des articles supprimés</h1>
 <div class="ui grid">
   <div class="twelve wide centered column">
@@ -36,7 +31,6 @@
           <td>{{$articleSup->stock}}</td>
           <td>{{$articleSup->type}}</td>
           <td>{{$articleSup->couleur}}</td>
-          <td>{{$articleSup->categorie}}</td>
           <td><img src="/images/{{$articleSup->img}}" width="60" alt="{{$articleSup->description}}"></td>
           <td><a href="/articleSup/{{$articleSup->id}}" class="ui button"><i class="list layout icon"></i></a></td>
           <td><a href="/restaurer/{{$articleSup->id}}" class="ui button"><i class="reply icon"></i></a></td>
@@ -47,3 +41,5 @@
     </table>
   </div>
 </div>
+
+@endsection
