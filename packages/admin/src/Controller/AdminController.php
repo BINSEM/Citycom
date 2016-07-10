@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller;
 use App\User;
 use App\Order;
 use App\Deliver;
+use App\Paiement;
 
 use App\Http\Requests;
 
@@ -90,6 +91,36 @@ class AdminController extends Controller
     *   Payments section
     *********************/
     public function getPaiements() {
-        return view('admin::paiements');
+        $paiements = Paiement::all();
+        return view('admin::paiements')->with(['paiements' => $paiements]);
+    }
+    public function postPaiements(Request $req) {
+        $modifs = $req->except('_token');
+        $paiements = Paiement::all();
+        foreach ($paiements as $paiement) {
+            $paiement->active = false;
+            $paiement->save();
+        }
+        foreach ($modifs as $key => $value) {
+            $modif = Paiement::where('nom', $key)->first();
+            $modif->active = true;
+            $modif->save();
+        }
+        return redirect('/admin/paiements');
+    }
+    public function putPaiements(Request $req) {
+        $check = Paiement::where('nom', $req->input('ajout'))->exists();
+        if(!$check) {
+            Paiement::create(['nom' => $req->input('ajout')]);
+        }
+        return redirect('/admin/paiements');
+    }
+    public function deletePaiements(Request $req) {
+        $check = Paiement::where('nom', $req->input('delete'))->exists();
+        if($check) {
+            $paiement = Paiement::where('nom', $req->input('delete'))->first();
+            $paiement->delete();
+        }
+        return redirect('/admin/paiements');
     }
 }
