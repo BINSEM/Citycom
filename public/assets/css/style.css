@@ -202,6 +202,10 @@
 #cardori{
 	 margin: 2em 0 3em ;
 }
+/*-------------------------------Contact-Ori---------------------------------*/
+.ui.contact.stackable.grid {
+	margin-top: 4em !important;
+}
 /*-------------------------------Footer-Ori---------------------------------*/
 
 #orifooter{

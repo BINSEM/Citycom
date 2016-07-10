@@ -30,6 +30,7 @@ Route::auth();
  	Route::post('/cart/delete', 'CartController@deleteCart');
  	Route::get('/profilarticle/{id}', 'CartController@showProfile');
  	Route::post('/cart/command', 'CartController@cartCommand');
+ 	Route::get('/cart/profilarticle/{id}', 'CartController@showProfile');
  });
 
 /* ---------------------------------------------
@@ -45,6 +46,7 @@ Route::auth();
  Route::get('/profile/images/{id}', 'HomeController@userImages');
  Route::get('/profile/image/{id}', 'HomeController@profileImage');
  Route::get('/orders', 'HomeController@orders');
+ Route::get('/contact', 'HomeController@contact');
 
 /* ---------------------------------------------
  AdresseController

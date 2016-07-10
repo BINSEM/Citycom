@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div id="arriere" >
+<div id="arriere" alt="photo de fond n/b, personne gravissant une montagne">
 	<div id="text">
 		Venus du bout du monde, 
 		Pour vous, <br />
@@ -18,30 +18,32 @@
 		<div class="ui centered grid">
 			<div class="doubling four column row" id="articlemag">
 				@foreach($products as $product)
-				<div class=" four wide column" id="cardori">
+				<div class="four wide column" id="cardori">
 					<div class="ui card">
-						<div class="image">
-							<img id="imageori" src="{{$product->img}}">
+						<div  class="image">
+							<img id="imageori" src="/images/{{$product->img}}">
 						</div>
 						<div class="content">
 							<a class="header">{{$product->nom}}</a>
 							<div class="description">
 								{{$product->description}}
 							</div>
-							<div id="prix">{{$product->prix}} €</div>
 						</div>
 						<div class="extra content">
-							<form action="/cart/post/{{$product->id}}" method="POST">
+							<form action="/cart/post/{{$product->id}}" method="post">
 								{{ csrf_field() }}
-								<button class="ui fluid yellow button" type="submit" formmethod="post" formaction="/cart/post/{{$product->id}}">Ajouter au panier</button>
-							</form>			
+							
+								<button type="submit" formaction="/cart/post/{{$product->id}}" formmethod="post" class="ui yellow tiny labeled icon button"><i class="shop icon"></i>Ajouter au panier</button>			
+							</form>
 							<br />			
+							<br />			
+							<a href="/cart/profilarticle/{{$product->id}}" class="ui yellow tiny labeled icon button">
 							<i class="zoom icon"></i>
-							<a onClick="parent.location='/profilarticle'">
 								Plus d'informations
 							</a>
+
 						</div>
-					</div>	
+					</div>
 				</div>
 				@endforeach
 			</div>
