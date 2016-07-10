@@ -42,7 +42,8 @@ class ProductController extends Controller
 
     public function updateProduct(Request $req, $id){
         $articleUpdate = $req->except('_token');
-        $article = Product::where('id', $id)->update()->save();
+        $article = Product::where('id', $id)->get();
+        $article = Product::update();
         return view('article::vueArticle', ['article'=> $article]);
     }
 

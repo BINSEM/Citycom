@@ -31,7 +31,6 @@
           <td>{{$articleSup->stock}}</td>
           <td>{{$articleSup->type}}</td>
           <td>{{$articleSup->couleur}}</td>
-          <td>{{$articleSup->categorie}}</td>
           <td><img src="/images/{{$articleSup->img}}" width="60" alt="{{$articleSup->description}}"></td>
           <td><a href="/articleSup/{{$articleSup->id}}" class="ui button"><i class="list layout icon"></i></a></td>
           <td><a href="/restaurer/{{$articleSup->id}}" class="ui button"><i class="reply icon"></i></a></td>
