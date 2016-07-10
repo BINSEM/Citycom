@@ -12,9 +12,9 @@
 					<a class="item">Petits Cailloux</a>
 				</div>
 			</div>
-			<a class="item">
+			<a class="item" href="/cart">
 			    <i class="shop icon"></i>
-Panier</a>
+			Panier</a>
 
 			<div class="right menu">
 

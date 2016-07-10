@@ -47,8 +47,8 @@
 #connection{
 	background-color: rgba(0,0,0, 0.4);
 	padding: 3em;
-	margin: auto;
-	border-radius: 0.5	em;
+	// margin: auto;
+	border-radius: 0.5em;
 }
 #labelori{
 	color: rgb(234, 174, 0);
