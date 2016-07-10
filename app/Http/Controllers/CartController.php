@@ -61,4 +61,9 @@ class CartController extends Controller
 		}
 		return view('cart.show', ['carts' => $carts , 'total' => $total]);
 	}
+	public function showProfile(Request $request, $id)
+	{
+		$product = Product::find($id);
+		return view('cart.profilarticle', ['product' => $product]); 
+	}
 }
