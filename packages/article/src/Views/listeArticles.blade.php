@@ -4,6 +4,22 @@
   <a href="/ajoutArticle" class="item">Ajouter un article </a>
   <a href="/articlesSupprimes" class="item">Articles supprimés </a>
 </div>
+<div class="ui form">
+  <div class="field">
+      <label>Type</label>
+      <div class="ui selection dropdown">
+          <input type="hidden" name="gender">
+          <i class="dropdown icon"></i>
+          <div class="default text">Type</div>
+          <div class="menu">
+              <div class="item" data-value="1">Galet</div>
+              <div class="item" data-value="0">Caillou</div>
+              <div class="item" data-value="0">Roche</div>
+              <div class="item" data-value="0">Autres</div>
+          </div>
+      </div>
+  </div>
+</div>
 
 <h1>Liste des articles</h1>
 <div class="ui stackable grid">
