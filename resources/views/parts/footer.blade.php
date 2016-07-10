@@ -1,6 +1,12 @@
-<footer>
-	<ul>
-		<li>Mentions légales</li>
-		<li>Contact</li>
-	</ul>
-</footer>
+
+<div id="orifooter" class="ui yellow bound bottom segment" >
+    	<div class="ui centered grid">
+		<a href="/">Mentions légales</a>
+		<a href="/">Contact</a>
+		</div>
+	</div>
+</div>
+</div>
+
+
+

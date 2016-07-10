@@ -1,0 +1,216 @@
+
+
+/*--------------------------------------User profile / binsem---------------------------------*/
+
+#profile{
+	margin-top: 2rem;
+}
+#profile .ui.stackable.two.column.row{
+	padding: 0;
+}
+.ui.link.list .item{
+	color: blue !important;
+	margin: 0.3rem 0 0.3rem 1rem;
+}
+.ui.teal.header{
+	text-align: center;
+	margin-top: 0.3rem;
+}
+#segment1{
+	background-color: #58D3F7;
+}
+#segment2{
+	margin-top: 0.3rem;
+	background-color: #58D3F7;
+}
+#segment3{
+	margin-top: 0.3rem;
+	background-color: #58D3F7;
+}
+.ui.segments>.ui.segments{
+	background-color: white;
+}
+#segment2 form{
+	width: 93%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0.5rem;
+}
+@media only screen and (max-width: 767px){
+	.ui.stackable.two.column.row .column{
+		padding: 0 1rem !important;
+	}
+}
+
+
+/*-------------------------------Connection/Inscription-Ori---------------------------------*/
+#connection{
+	background-color: rgba(0,0,0, 0.4);
+	padding: 3em;
+	// margin: auto;
+	border-radius: 0.5em;
+}
+#labelori{
+	color: rgb(234, 174, 0);
+	font-family: Helvetica;
+	font-weight: bold;
+	}
+#inscription{
+	background-color: rgba(0,0,0, 0.4);
+	border-radius: 0.5em;
+	padding: 3em;	
+}
+#fondlogin{
+	position: relative;	
+	height : 100%;	
+	width : 100%;
+	margin:0;
+	padding:0;
+	background: url(rocks.jpg) no-repeat center fixed; 
+	-webkit-background-size: cover;
+	background-size: cover; 
+	z-index:1;	
+}
+
+/*-------------------------------Header-Ori---------------------------------*/
+#oriheader{
+	position: relative; 
+	top: 0;
+	width: 100%; 
+	height: 07%;
+}
+.ui.menu.ori{
+	margin-top: 0.8em;
+	
+}
+
+/*-------------------------------Home-Ori---------------------------------*/
+
+#text{
+	position:relative;
+	text-outline: 10%;
+	top: 1em;
+	left:1%;
+	width:100%;
+	padding: 2em;
+	z-index:10;
+	font-family: Helvetica;
+	font-size: 2em;
+	text-transform: uppercase;
+	line-height: 1.2em;
+	text-align: center;
+	color: gray;
+	font-style: italic;
+}
+#arriere{
+	position: relative;	
+	height : 100%;	
+	width : 100%;
+	margin:0;
+	padding:0;
+	background: url(rocks.jpg) no-repeat center fixed; 
+	-webkit-background-size: cover;
+	background-size: cover; 
+	z-index:1;
+}
+#centertitre{
+	text-align: center;
+	margin-top: 25%;
+}
+#titre{
+	// top: 65%;
+	text-outline: 50%;
+	height: 10%;
+	width:100%;
+	z-index:10;
+	font-family: 'Droid Serif', serif;
+	font-weight: 400;
+	font-size: 4em;
+	text-transform: uppercase;
+	// text-align: center;
+	color: rgb(234, 174, 0);
+	background-color: rgba(0,0,0, 0.5);
+}
+#admirez{
+	position:inherit;
+	// position:absolute;
+	text-outline: 10%;
+	width: 65%;
+	font-size: 1.5em;
+	text-transform: lowercase;
+	line-height: 1.2em;
+	// text-align: center;
+	color: gray;
+	text-decoration: underline;
+	background-color: rgba(0,0,0, 0.5);
+	color: rgb(234, 174, 0);
+	
+}
+
+
+
+
+/*-------------------------------Nav responsive-Ori---------------------------------*/
+.ui.grid.main{
+	margin-top: 70px;
+}
+
+
+.mobile.row{
+	padding-top: 0px !important;
+	margin-top: 0px !important;
+}
+
+.mobile.row .ui.inverted.menu{
+	border-radius: 0px !important;
+}
+
+.padding-reset{
+	padding: 0px !important;
+}
+
+.ui.message{
+	padding: 40px !important;
+}
+
+@media (max-width: 767px) {
+  	.ui.grid.main{
+  		margin-top: 70px;
+	}
+
+        .ui.grid { margin: 0 !important; }
+	.ui.vertical.menu.navbar{
+		margin-top: 0px !important;
+	}
+}
+
+.ui.vertical.menu{
+	margin-top: -15px !important;
+	width: 100%;
+	display: none;
+}
+.ui.mini.yellow.button{
+    padding: .3em .3em !important;
+    margin: .1em !important;
+
+}
+
+/*-------------------------------Articles-Ori---------------------------------*/
+#imageori{
+    height: 200px;
+}
+#cardori{
+	 margin: 2em 0 3em ;
+}
+/*-------------------------------Footer-Ori---------------------------------*/
+
+#orifooter{
+	position: fixed;
+	margin: 0;
+	bottom: 0;
+	width: 100%; 
+	height: 07%;
+	z-index: 1000;
+	margin: -1em 0 !important;
+
+}
