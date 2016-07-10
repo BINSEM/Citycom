@@ -34,6 +34,11 @@
 						<div class="item">
 							<input type="button" onClick="parent.location='/logout'" class="ui fluid teal button" value="Déconnection" />
 						</div>
+						@if(Auth::check() && (Auth::user()->roles->contains('nom', 'admin')))
+						<div class="item">
+							<input type="button" onClick="parent.location='/admin'" class="ui fluid red button" value="Administration" />
+						</div>
+						@endif
 					</form>
 					@endif
 
