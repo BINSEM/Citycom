@@ -1,20 +1,20 @@
-@extends('layout.main')
+@extends('layouts.main')
 @section('content')
 
 <!-- @include('parts.header') -->
 
 
-<h1>{{$article->nom}}</h1>
+<h1>{{$product->nom}}</h1>
 
 <div class="ui centered internally celled grid">
 	<div class="row">
 		<div class="three wide column">
 			<div class="ui card">
 				<div class="ui medium image">
-					<img width="250" src="/images/{{$product->img}}">
+					<img width="250" src="/images/{{$product->img}}" style="height: 30%;">
 				</div>
 				<div class="content">
-					<a class="header">Beau Caillou</a>
+					<a class="header">{{$product->nom}}</a>
 				</div>
 			</div>
 		</div>
@@ -39,9 +39,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="ui fluid yellow button">
-	<a href="/cart/post/{{$product->id}}"><i class="shop icon"></i>Ajouter au panier</a>
-	</div>
-<!-- 			<div class="ui button">
-				<a href="/editerArticle/{{$article->id}}">Modifier</a>
-			</div> -->
+	<form action="/cart/post/{{$product->id}}" method="post">
+		{{ csrf_field() }}
+
+		<button type="submit" formaction="/cart/post/{{$product->id}}" formmethod="post" class="ui yellow tiny labeled icon button"><i class="shop icon"></i>Ajouter au panier</button>			
+	</form>
+</div>

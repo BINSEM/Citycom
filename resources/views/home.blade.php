@@ -18,81 +18,34 @@
 		<div class="ui centered grid">
 			<div class="doubling four column row" id="articlemag">
 				@foreach($products as $product)
-				<div class=" four wide column" id="cardori">
-					<div class="ui card">
-						<div class="image">
-							<img id="imageori" src="/images/rock.jpg">
-						</div>
-						<div class="content">
-							<a class="header">Beau Caillou</a>
-							<div class="description">
-								Le plus beau!
-							</div>
-						</div>
-						<div class="extra content">
-							<form action="/cart/post/{{$product->id}}" method="POST">
-								{{ csrf_field() }}
-								<button class="ui fluid yellow button" type="submit" formmethod="post" formaction="/cart/post/{{$product->id}}">Ajouter au panier</button>
-							</form>			
-							<br />			
-							<i class="zoom icon"></i>
-							<a onClick="parent.location='/profilarticle'">
-								Plus d'informations
-							</a>
-						</div>
-					</div>	
-				</div>
-				@endforeach
-
 				<div class="four wide column" id="cardori">
 					<div class="ui card">
 						<div  class="image">
-							<img id="imageori" src="/images/waterrocks.jpg">
+							<img id="imageori" src="/images/{{$product->img}}">
 						</div>
 						<div class="content">
-							<a class="header">Joli Caillou</a>
+							<a class="header">{{$product->nom}}</a>
 							<div class="description">
-								Le plus beau!
+								{{$product->description}}
 							</div>
 						</div>
 						<div class="extra content">
-							<i class="shop icon"></i>
-							<a onClick="parent.location='/addcart'">
-								Ajouter au panier
-							</a>			
+							<form action="/cart/post/{{$product->id}}" method="post">
+								{{ csrf_field() }}
+							
+								<button type="submit" formaction="/cart/post/{{$product->id}}" formmethod="post" class="ui yellow tiny labeled icon button"><i class="shop icon"></i>Ajouter au panier</button>			
+							</form>
 							<br />			
+							<br />			
+							<a href="/cart/profilarticle/{{$product->id}}" class="ui yellow tiny labeled icon button">
 							<i class="zoom icon"></i>
-							<a onClick="parent.location='/profilarticle'">
 								Plus d'informations
 							</a>
 
 						</div>
 					</div>
-				</div>			
-				<div class="four wide column" id="cardori">
-					<div class="ui card">
-						<div class="image">
-							<img id="imageori"  src="/images/rock.jpg">
-						</div>
-						<div class="content">
-							<a class="header">Beau Caillou</a>
-							<div class="description">
-								Le plus beau!
-							</div>
-						</div>
-						<div class="extra content">
-							<i class="shop icon"></i>
-							<a onClick="parent.location='/post'">
-								Ajouter au panier
-							</a>			
-							<br />			
-							<i class="zoom icon"></i>
-							<a onClick="parent.location='/profilarticle'">
-								Plus d'informations
-							</a>
-						</div>
-					</div>
 				</div>
+				@endforeach
 			</div>
 		</div>
 	</div>
