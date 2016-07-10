@@ -4,7 +4,9 @@
 <div class="ui grid" id="fondlogin">
     &nbsp;
     &nbsp;
-
+    @if(session()->has('message'))
+    <h3 id="message" class="ui eight wide centered column message">{{session()->get('message')}}</h3>
+    @endif
     <div class="three column row" >
        <div class="centered floated column"id="inscription">
            <div class="ui header">S'inscrire au Royaume de la Caillasse</div>
