@@ -27,20 +27,20 @@ class CartController extends Controller
 			$total = 0;
 			$carts = 'panier vide';
 		}
-		return view('cart.index', ['carts' => $carts , 'products' => $products, 'total' => $total]);
+		return view('home', ['carts' => $carts , 'products' => $products, 'total' => $total]);
 	}
 
 	public function postCart(Request $request, $id)
 	{
 		$product = Product::find($id)->toArray();
 		$request->session()->push('cart', $product);
-		return redirect('/cart/test');
+		return redirect('/');
 	}
 
 	public function deleteCart(Request $request)
 	{
 		$request->session()->forget('cart');
-		return redirect('/cart/test');
+		return redirect('/');
 	}
 
 	public function showCart(Request $request)

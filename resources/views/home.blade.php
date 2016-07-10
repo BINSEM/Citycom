@@ -17,6 +17,7 @@
 	<div class="ui yellow segment">
 		<div class="ui centered grid">
 			<div class="doubling four column row" id="articlemag">
+				@foreach($products as $product)
 				<div class=" four wide column" id="cardori">
 					<div class="ui card">
 						<div class="image">
@@ -29,10 +30,10 @@
 							</div>
 						</div>
 						<div class="extra content">
-							<i class="shop icon"></i>
-							<a onClick="parent.location='/addcart'">
-								Ajouter au panier
-							</a>			
+							<form action="/cart/post/{{$product->id}}" method="POST">
+								{{ csrf_field() }}
+								<button class="ui fluid yellow button" type="submit" formmethod="post" formaction="/cart/post/{{$product->id}}">Ajouter au panier</button>
+							</form>			
 							<br />			
 							<i class="zoom icon"></i>
 							<a onClick="parent.location='/profilarticle'">
@@ -41,6 +42,8 @@
 						</div>
 					</div>	
 				</div>
+				@endforeach
+
 				<div class="four wide column" id="cardori">
 					<div class="ui card">
 						<div  class="image">

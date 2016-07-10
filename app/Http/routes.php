@@ -12,9 +12,9 @@
 */
 
 
-Route::get('/', function () {
-	return view('home');
-});
+// Route::get('/', function () {
+// 	return view('home');
+// });
 
 Route::auth();
 
@@ -23,6 +23,7 @@ Route::auth();
  ---------------------------------------------*/
 
  Route::group(['middleware'=>'web'], function(){
+ 	Route::get('/', 'CartController@index');
  	Route::get('/cart/test', 'CartController@index');
  	Route::get('/cart', 'CartController@showCart');
  	Route::post('/cart/post/{id}', 'CartController@postCart');
