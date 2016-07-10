@@ -12,7 +12,7 @@
 					<a class="item">Petits Cailloux</a>
 				</div>
 			</div>
-			<a class="item">
+			<a href="/panier" class="item">
 				<i class="shop icon"></i>
 				Panier
 				<br>@if (isset($carts)) {{$carts}} Produits {{$total}} &euro; @endif</a>
