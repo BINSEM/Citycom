@@ -15,6 +15,7 @@ Route::get('/', function () {
 	return view('home');
 });
 
+
 Route::auth();
 
 /* ---------------------------------------------
@@ -42,8 +43,10 @@ Route::get('/orders', 'HomeController@orders');
  Route::post('/adresse/update/{id}', 'AdresseController@updateAdresse');
 
  /* ---------------------------------------------
- Controller
+ CartController
  ---------------------------------------------*/
+
+ Route::get('/cart', 'CartController@index');
 
  /* ---------------------------------------------
  Controller

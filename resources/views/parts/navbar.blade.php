@@ -12,7 +12,9 @@
 					<a class="item">Petits Cailloux</a>
 				</div>
 			</div>
-			<a class="item">Aide</a>
+			<a class="item">
+			    <i class="shop icon"></i>
+Panier</a>
 			<div class="right menu">
 
 				@if (Auth::guest())
@@ -42,8 +44,8 @@
 <div class="ui stackable grid">
 	<div class="mobile only row">
 		<div class="ui fixed menu">
-			<div class="ui vertical navbar menu" >
-				<div class="ui menu ">
+			<div class="ui vertical menu" >
+				<div class="ui menu ori ">
 					<a class="item" href="/">Accueil</a>
 					<div class="ui dropdown item">
 						<i class="dropdown icon"></i>
@@ -54,7 +56,7 @@
 							<a class="item">Petits Cailloux</a>
 						</div>
 					</div>
-					<a class="item">Aide</a>
+					<a class="item">Panier</a>
 					<div class="right menu">
 
 						@if (Auth::guest())

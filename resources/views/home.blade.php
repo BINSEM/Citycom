@@ -29,13 +29,13 @@
 							</div>
 						</div>
 						<div class="extra content">
-							<a>
-								<i class="shop icon"></i>
+							<i class="shop icon"></i>
+							<a onClick="parent.location='/addcart'">
 								Ajouter au panier
 							</a>			
 							<br />			
-							<a>
-								<i class="zoom icon"></i>
+							<i class="zoom icon"></i>
+							<a onClick="parent.location='/profilarticle'">
 								Plus d'informations
 							</a>
 						</div>
@@ -53,13 +53,13 @@
 							</div>
 						</div>
 						<div class="extra content">
-							<a>
-								<i class="shop icon"></i>
+							<i class="shop icon"></i>
+							<a onClick="parent.location='/addcart'">
 								Ajouter au panier
 							</a>			
 							<br />			
-							<a>
-								<i class="zoom icon"></i>
+							<i class="zoom icon"></i>
+							<a onClick="parent.location='/profilarticle'">
 								Plus d'informations
 							</a>
 
@@ -78,13 +78,13 @@
 							</div>
 						</div>
 						<div class="extra content">
-							<a>
-								<i class="shop icon"></i>
+							<i class="shop icon"></i>
+							<a onClick="parent.location='/addcart'">
 								Ajouter au panier
 							</a>			
 							<br />			
-							<a>
-								<i class="zoom icon"></i>
+							<i class="zoom icon"></i>
+							<a onClick="parent.location='/profilarticle'">
 								Plus d'informations
 							</a>
 						</div>

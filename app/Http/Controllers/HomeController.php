@@ -35,7 +35,13 @@ class HomeController extends Controller
     public function profile()
     {
         $user = Auth::user();
-        return view('user.profile', ['user' => $user]);
+        if(count($user->adresses) > 0){
+            $adresses = $user->adresses->all();
+            return view('user.profile', ['user' => $user, 'adresses' => $adresses]);
+        }
+        else{
+            return view('user.profile', ['user' => $user]);
+        }
     }
 
     public function editProfile(Request $request, $id)
