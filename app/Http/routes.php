@@ -29,6 +29,7 @@ Route::auth();
  	Route::post('/cart/post/{id}', 'CartController@postCart');
  	Route::post('/cart/delete', 'CartController@deleteCart');
  	Route::get('/profilarticle/{id}', 'CartController@showProfile');
+ 	Route::post('/cart/command', 'CartController@cartCommand');
  });
 
 /* ---------------------------------------------
