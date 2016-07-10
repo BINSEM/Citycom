@@ -1,7 +1,8 @@
 @extends('layouts.main')
 @section('content')
-<div class="ui centered grid" style="margin: 5rem 0 2rem;">
+<div class="ui centered grid" style="margin: 5rem 0 2.5rem;">
 	<div class="ui nine wide column">
+		@if(count($carts) > 0)
 		<table class="ui table">
 			<thead>
 				<tr>
@@ -33,6 +34,9 @@
 			{{ csrf_field() }}
 			<button type="submit" class="ui red button right floated">Annuler</button>
 		</form>
+		@else
+		<div class="ui floating message"><h2>What a shame....</h2><br /> Votre panier est vide.</div>
+		@endif
 	</div>	
 </div>
 @endsection
