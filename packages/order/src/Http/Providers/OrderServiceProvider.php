@@ -3,7 +3,8 @@
 namespace Order\Http\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use View;
+use Session;
 class OrderServiceProvider extends ServiceProvider
 {
     /**
