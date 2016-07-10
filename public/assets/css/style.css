@@ -1,9 +1,28 @@
 
 
-/*--------------------------------------User profile / binsem---------------------------------*/
+/*--------------------------------------User profile / BINSEM---------------------------------*/
 
-#profile{
-	margin-top: 2rem;
+@media only screen and (max-width : 601px){
+	#profile{ 
+		margin-top: 4em !important; 
+	}
+	#profile_edit{ 
+		margin: auto; 
+		background-color:white; 
+		margin-top: 4em !important;
+		margin-bottom: 4em !important;
+	}
+}
+@media only screen and (min-width : 601px){
+	#profile{ 
+		margin-top: 4em !important; 
+	}
+	#profile_edit{ 
+		margin: auto; margin-top: 4rem;  
+		background-color:white; 
+		margin-top: 4em !important;
+		margin-bottom: 4em !important;
+	}
 }
 #profile .ui.stackable.two.column.row{
 	padding: 0;
@@ -36,13 +55,70 @@
 	margin-left: auto;
 	margin-bottom: 0.5rem;
 }
-@media only screen and (max-width: 767px){
+@media only screen and (min-width: 767px){
 	.ui.stackable.two.column.row .column{
 		padding: 0 1rem !important;
 	}
+	#profile{
+		margin: auto;
+		left: 50%; 
+		margin-top: 3rem; 
+		background-color:white; 
+		width: 50%;
+	}
+	#profile_edit{
+		margin: auto; 
+		margin-top: 3rem; 
+		background-color:white; 
+		width: 50%;
+		margin-top: 4em !important;
+		margin-bottom: 4em !important;
+	}
+	#add_adress{
+		margin: auto; 
+		margin-top: 3rem; 
+		width: 50%;
+		margin-top: 4em !important;
+		margin-bottom: 4em !important;
+	}
 }
 
+#profile_img{
+	margin: auto; 
+	margin-top: 7rem;  
+	background-color:white; 
+	width: 50%;
+}
 
+#profile_img .field label{
+	width:100%; 
+	color: rgb(234, 174, 0); 
+	font-size: 1.3rem;
+}
+
+#profileImg{
+	margin-top: 1rem;
+}
+
+#profile_images{
+	width: 95%;
+	margin-top:6.5rem; 
+	margin-left: auto; 
+	margin-right: auto;
+	margin-bottom: 4em;
+}
+
+#profile_images .four.wide.column{
+	margin-bottom: 1rem
+}
+
+#profile_images img{
+	height: 180px;
+}
+
+.ui.styled.accordion" {
+	margin-top:1rem;
+}
 /*-------------------------------Connection/Inscription-Ori---------------------------------*/
 #connection{
 	background-color: rgba(0,0,0, 0.4);
@@ -54,7 +130,7 @@
 	color: rgb(234, 174, 0);
 	font-family: Helvetica;
 	font-weight: bold;
-	}
+}
 #inscription{
 	background-color: rgba(0,0,0, 0.4);
 	border-radius: 0.5em;
@@ -174,11 +250,11 @@
 }
 
 @media (max-width: 767px) {
-  	.ui.grid.main{
-  		margin-top: 70px;
+	.ui.grid.main{
+		margin-top: 70px;
 	}
 
-        .ui.grid { margin: 0 !important; }
+	.ui.grid { margin: 0 !important; }
 	.ui.vertical.menu.navbar{
 		margin-top: 0px !important;
 	}
@@ -190,17 +266,17 @@
 	display: none;
 }
 .ui.mini.yellow.button{
-    padding: .3em .3em !important;
-    margin: .1em !important;
+	padding: .3em .3em !important;
+	margin: .1em !important;
 
 }
 
 /*-------------------------------Articles-Ori---------------------------------*/
 #imageori{
-    height: 200px;
+	height: 200px;
 }
 #cardori{
-	 margin: 2em 0 3em ;
+	margin: 2em 0 3em ;
 }
 /*-------------------------------Footer-Ori---------------------------------*/
 

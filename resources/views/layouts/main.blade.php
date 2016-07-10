@@ -26,6 +26,9 @@
 			});
 
 			$('.ui.dropdown').dropdown();
+
+			// -----------styled accordion user profile / BINSEM-----------
+			$('.ui.styled.accordion').accordion();
 		});
 	</script>
 

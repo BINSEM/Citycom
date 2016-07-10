@@ -2,14 +2,14 @@
 
 @section('content')
 
-<div id="profile" class="ui centered grid" style="margin: auto; margin-top: 7rem; left: 50%; background-color:white; width: 50%;">
+<div id="profile" class="ui centered grid">
 
-	<div class="ui image" style="margin-top:1rem;">
+	<div class="ui image">
 		<img class="ui medium circular image" src="{{ $user->avatar->path or Gravatar::get(Auth::user()->email) }}">
 		<h2 class="header">{{$user->prenom}} {{$user->name}}</h2>
 	</div>
 
-	<div class="ui styled accordion" style="margin-top:1rem;">
+	<div class="ui styled accordion">
 		<div class="active title">
 			<i class="dropdown icon"></i>
 			INFORMATIONS DE FROFIL
@@ -65,7 +65,7 @@
 	</div>
 
 
-	<div class="ui grid" style="margin-top: 1rem;">
+	<div id="profileImg" class="ui grid">
 		<div class="ui row">
 			<div class="column">
 				<div class="ui center aligned extra content">
@@ -77,7 +77,3 @@
 </div>
 
 @endsection
-
-<script type="text/javascript">
-	$('.ui.styled.accordion').accordion();
-</script>
