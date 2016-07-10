@@ -1,28 +1,43 @@
 @include('parts.header')
 <div class="ui vertical pointing menu">
-  <a href="/listeArticles" class="item">Liste des articles </a>
-  <a href="/ajoutArticle" class="item">Ajouter un article </a>
+	<a href="/listeArticles" class="item">Liste des articles </a>
+	<a href="/ajoutArticle" class="item">Ajouter un article </a>
+	<a href="/articlesSupprimes" class="item">Articles supprimés </a>
 </div>
 <!-- champ détail de l'article -->
-<h1>Nouvel article enregistré</h1>
-<label for="id">Id</label>
-<div class="ui field">{{$article->id}}</div>
-<label for="nom">Nom</label>
-<div class="ui field">{{$article->nom}}</div>
-<label for="description">Description</label>
-<div class="ui field">{{$article->description}}</div>
-<label for="prix">Prix</label>
-<div class="ui field">{{$article->prix}}</div>
-<label for="ref">Référence</label>
-<div class="ui field">{{$article->ref}}</div>
-<label for="stock">Stock</label>
-<div class="ui field">{{$article->stock}}</div>
-<label for="categorie">Catégorie</label>
-<div class="ui field">{{$article->categorie}}</div>
+<h1>{{$article->nom}}</h1>
 
-
-<!-- menu vertical de modification des données -->
-<div class="ui vertical pointing menu">
-  <a href="/editerArticle/{{$article->id}}" class="item">Editer </a>
-  <a href="/suppression/{{$article->id}}" class="item">Supprimer </a>
-</div>
+<div class="ui centered internally celled grid">
+	<div class="row">
+		<div class="three wide column">
+			<div class="ui medium rounded image">
+				<img width="250" src="/images/{{$article->img}}">
+			</div>
+		</div>
+		<div class="height wide column">
+			<p>{{$article->description}}</p>
+		</div>
+		<div class="three wide column">
+			<div class="meta">
+				Identifiant: {{$article->id}}
+			</div>
+			<div class="meta">
+				Référence: {{$article->ref}}
+			</div>
+			<div class="meta">
+				Prix: {{$article->prix}}
+			</div>
+			<div class="meta">
+				Catégorie: {{$article->categorie}}
+			</div>
+			<div class="meta">
+				Stock: {{$article->stock}}
+			</div>
+		</div>
+	</div>
+			<div class="ui button red">
+				<a href="/suppression/{{$article->id}}"><i class="delete icon"></i>Supprimer</a>
+			</div>
+			<div class="ui button">
+				<a href="/editerArticle/{{$article->id}}">Modifier</a>
+			</div>

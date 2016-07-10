@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h2>Ajouter / Modifier un type de livraison</h2>
+<h2 class="ui fifteen wide column">Ajouter / Modifier un type de livraison</h2>
 <form action="" method="post" class="ui form">
 	{{csrf_field()}}
 	<label for="type">Type</label><input type="text" name="type" placeholder="Type de livraison" required="true"><br>
@@ -11,7 +11,7 @@
 	<label for="type">Condition</label><input type="text" name="condition" placeholder="Conditions de la livraison"><br>
 	<button type="submit" class="ui button">Ajouter</button>
 </form>
-<table class="ui table">
+<table class="ui sixteen wide column centered table">
 	<tr>
 		<td> id </td>
 		<td> Type </td>

@@ -3,7 +3,7 @@
 @section('content')
 
 <h2>Liste des utilisateurs</h2>
-<table>
+<table class="ui table">
 	<tr>
 		<td> id </td>
 		<td> Pseudo </td>
