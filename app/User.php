@@ -52,3 +52,14 @@ class User extends Authenticatable
         return $this->hasMany('App\Cart');
     }
 }
+
+            // $table->increments('id');
+            // $table->char('nom', 20);
+            // $table->string('description');
+            // $table->decimal('prix', 6, 2);
+            // $table->bigInteger('ref');
+            // $table->integer('stock');
+            // $table->char('categorie', 20);
+            // $table->char('img', 40);
+            // $table->timestamps();
+            // $table->softDeletes();
