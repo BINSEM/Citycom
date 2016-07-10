@@ -6,6 +6,8 @@
     ],
     "hash": "9ea7aa4407abba7bcd364c2dad960b1b",
     "content-hash": "a6413efa8a09c3b6a4363020e658a26a",
+    "hash": "12cb10c2259cbadd090a7e39054bf756",
+    "content-hash": "f72ea61b442a8d78c2f0ca15ffd5a9ce",
     "packages": [
         {
             "name": "baum/baum",
@@ -196,6 +198,7 @@
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
+}
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
@@ -262,6 +265,7 @@
             "time": "2015-08-31 12:32:49"
         },
         {
+<<<<<<< HEAD
             "name": "doctrine/cache",
             "version": "v1.6.0",
             "source": {
@@ -285,16 +289,42 @@
                 "phpunit/phpunit": "~4.8|~5.0",
                 "predis/predis": "~1.0",
                 "satooshi/php-coveralls": "~0.6"
+=======
+            "name": "doctrine/lexer",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+>>>>>>> 54a3c361c58cf7b42ff99f865711b560f798d25d
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.6.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
+=======
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Lexer\\": "lib/"
+>>>>>>> 54a3c361c58cf7b42ff99f865711b560f798d25d
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -305,6 +335,7 @@
                 {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
+<<<<<<< HEAD
                 },
                 {
                     "name": "Benjamin Eberlei",
@@ -319,10 +350,19 @@
                     "email": "jonwage@gmail.com"
                 },
                 {
+=======
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+>>>>>>> 54a3c361c58cf7b42ff99f865711b560f798d25d
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com"
                 }
             ],
+<<<<<<< HEAD
             "description": "Caching library offering an object-oriented API for many cache backends",
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
@@ -330,6 +370,15 @@
                 "caching"
             ],
             "time": "2015-12-31 16:37:02"
+=======
+            "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "lexer",
+                "parser"
+            ],
+            "time": "2014-09-09 13:34:57"
+>>>>>>> 54a3c361c58cf7b42ff99f865711b560f798d25d
         },
         {
             "name": "doctrine/collections",
@@ -2935,6 +2984,7 @@
             "time": "2016-04-26 08:34:50"
         },
         {
+<<<<<<< HEAD
             "name": "omnipay/targetpay",
             "version": "v2.2.1",
             "source": {
@@ -3049,6 +3099,8 @@
             "time": "2016-01-28 12:55:58"
         },
         {
+=======
+>>>>>>> 54a3c361c58cf7b42ff99f865711b560f798d25d
             "name": "paragonie/random_compat",
             "version": "v1.4.1",
             "source": {
@@ -3208,23 +3260,23 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.3",
+            "version": "v5.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "4cc92842069c2bbc1f28daaaf1d2576ec4dfe153"
+                "reference": "d8db871a54619458a805229a057ea2af33c753e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/4cc92842069c2bbc1f28daaaf1d2576ec4dfe153",
-                "reference": "4cc92842069c2bbc1f28daaaf1d2576ec4dfe153",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/d8db871a54619458a805229a057ea2af33c753e8",
+                "reference": "d8db871a54619458a805229a057ea2af33c753e8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9.1"
+                "mockery/mockery": "~0.9.1,<0.9.4"
             },
             "type": "library",
             "extra": {
@@ -3257,7 +3309,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-07-08 11:51:25"
+            "time": "2016-05-01 08:45:47"
         },
         {
             "name": "symfony/console",
@@ -3378,27 +3430,27 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.8.8",
+            "version": "v3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "b180b70439dca70049b6b9b7e21d75e6e5d7aca9"
+                "reference": "7f9839ede2070f53e7e2f0849b9bd14748c434c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b180b70439dca70049b6b9b7e21d75e6e5d7aca9",
-                "reference": "b180b70439dca70049b6b9b7e21d75e6e5d7aca9",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/7f9839ede2070f53e7e2f0849b9bd14748c434c5",
+                "reference": "7f9839ede2070f53e7e2f0849b9bd14748c434c5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
+                "php": ">=5.5.9"
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/dependency-injection": "~2.6|~3.0.0",
-                "symfony/expression-language": "~2.6|~3.0.0",
-                "symfony/stopwatch": "~2.3|~3.0.0"
+                "symfony/config": "~2.8|~3.0",
+                "symfony/dependency-injection": "~2.8|~3.0",
+                "symfony/expression-language": "~2.8|~3.0",
+                "symfony/stopwatch": "~2.8|~3.0"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -3407,7 +3459,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -3434,7 +3486,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-29 05:29:29"
+            "time": "2016-06-29 05:41:56"
         },
         {
             "name": "symfony/finder",

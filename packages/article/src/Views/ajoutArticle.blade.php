@@ -26,10 +26,17 @@
         <label>Référence</label>
         <input type="text" name="ref" placeholder="Référence">
       </div>
-      <div class="field">
-        <label>Catégorie</label>
-        <input type="text" name="categorie" placeholder="Catégorie">
-      </div>
+      <label>Catégories</label>
+      <div class="two fields">
+        <div class="field">
+          <label>Couleur</label>
+          <input type="text" name="couleur" placeholder="Catégorie">
+        </div>
+        <div class="field">
+          <label>Type</label>
+          <input type="text" name="type" placeholder="Catégorie">
+        </div>
+      </div> 
       <div class="field">
         <label>Image</label>
         <input type="text" name="img" placeholder="Image">

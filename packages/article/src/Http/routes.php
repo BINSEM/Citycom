@@ -39,7 +39,7 @@ Route::get('/supprimer/{id}', 'Article\Controller\ProductController@deleteProduc
 Route::get('/articlesSupprimes', 'Article\Controller\ProductController@listDelete');
 // vue de l'article supprimé
 Route::get('/articleSup/{id}', 'Article\Controller\ProductController@productDeleted');
-// restaurer unn article
+// restaurer un article
 Route::get('/restaurer/{id}', 'Article\Controller\ProductController@productRestore');
 // suppression définitive d'un article
 Route::get('/supprDef/{id}', 'Article\Controller\ProductController@deleteDef');
