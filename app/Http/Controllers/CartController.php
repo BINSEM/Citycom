@@ -57,7 +57,7 @@ class CartController extends Controller
 			$total = array_sum($sum);
 		}else{
 			$total = 0;
-			$carts = 'panier vide';
+			$carts = [];
 		}
 		return view('cart.show', ['carts' => $carts , 'total' => $total]);
 	}
