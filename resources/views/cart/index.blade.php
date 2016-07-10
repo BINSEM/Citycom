@@ -3,11 +3,11 @@
 @section('content')
 
 <div id="products" class="ui centered grid" style="margin-top:6.5rem; width: 95%; margin-left: auto; margin-right: auto;">
-	<div style="display: inline;">
-		<h2>Nos Produits</h2>
+	<div>
+		<h2>Nos Produits <a href="/cart">Panier</a></h2>
 		<p>{{$total}} &euro;</p>
 		<p>{{$carts}} Produit</p>
-	</div>	
+	</div>
 	<div class="doubling four column row">
 		@foreach($products as $product)
 		
@@ -25,12 +25,11 @@
 				<div class="extra content">
 					<form action="/cart/post/{{$product->id}}" method="POST">
 						{{ csrf_field() }}
-						<button class="ui fluid yellow button" type="submit">Ajouter au panier</button>
+						<button class="ui fluid yellow button" type="submit" formmethod="post" formaction="/cart/post/{{$product->id}}">Ajouter au panier</button>
 					</form>
 				</div>
 			</div>
 		</div>
-		
 		@endforeach
 	</div>
 </div>

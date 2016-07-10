@@ -11,12 +11,6 @@
 |
 */
 
-Route::group(['middleware'=>'web'], function(){
-	 Route::get('/cart/test', 'CartController@index');
-	 Route::get('/cart', 'CartController@cart');
-	 Route::post('cart/post/{id}', 'CartController@postCart');
-	 Route::post('cart/delete', 'CartController@deleteCart');
-});
 
 Route::get('/', function () {
 	return view('home');
@@ -24,19 +18,30 @@ Route::get('/', function () {
 
 Route::auth();
 
+ /* ---------------------------------------------
+ CartController
+ ---------------------------------------------*/
+
+ Route::group(['middleware'=>'web'], function(){
+ 	Route::get('/cart/test', 'CartController@index');
+ 	Route::get('/cart', 'CartController@showCart');
+ 	Route::post('/cart/post/{id}', 'CartController@postCart');
+ 	Route::post('/cart/delete', 'CartController@deleteCart');
+ });
+
 /* ---------------------------------------------
  HomeController
  ---------------------------------------------*/
 
-Route::get('/home', 'HomeController@index');
-Route::get('/profile', 'HomeController@profile');
-Route::get('/profile/edit/{id}', 'HomeController@editProfile');
-Route::post('/profile/update/{id}', 'HomeController@updateProfile');
-Route::get('/profile/addImage/{id}', 'HomeController@addImageProfile');
-Route::post('/profile/saveImage/{id}', 'HomeController@saveImageProfile');
-Route::get('/profile/images/{id}', 'HomeController@userImages');
-Route::get('/profile/image/{id}', 'HomeController@profileImage');
-Route::get('/orders', 'HomeController@orders');
+ Route::get('/home', 'HomeController@index');
+ Route::get('/profile', 'HomeController@profile');
+ Route::get('/profile/edit/{id}', 'HomeController@editProfile');
+ Route::post('/profile/update/{id}', 'HomeController@updateProfile');
+ Route::get('/profile/addImage/{id}', 'HomeController@addImageProfile');
+ Route::post('/profile/saveImage/{id}', 'HomeController@saveImageProfile');
+ Route::get('/profile/images/{id}', 'HomeController@userImages');
+ Route::get('/profile/image/{id}', 'HomeController@profileImage');
+ Route::get('/orders', 'HomeController@orders');
 
 /* ---------------------------------------------
  AdresseController
@@ -47,10 +52,6 @@ Route::get('/orders', 'HomeController@orders');
  Route::get('/adresse/add', 'AdresseController@adresseAdd');
  Route::get('/adresse/edit/{id}', 'AdresseController@editAdresse');
  Route::post('/adresse/update/{id}', 'AdresseController@updateAdresse');
-
- /* ---------------------------------------------
- CartController
- ---------------------------------------------*/
 
 
  /* ---------------------------------------------

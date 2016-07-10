@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Session;
 use App\Product;
 use App\Order;
+use App\Cart;
 
 use App\Http\Requests;
 
@@ -40,5 +41,24 @@ class CartController extends Controller
 	{
 		$request->session()->forget('cart');
 		return redirect('/cart/test');
+	}
+
+	public function showCart(Request $request)
+	{
+		$carts = $request->session()->get('cart');
+		// $objects = new Cart();
+		$sum = [];
+
+		if(count($carts) > 0){
+			foreach ($carts as $cart => $value) {
+				$cart = $value;
+				array_push($sum, $cart['prix']);
+			}
+			$total = array_sum($sum);
+		}else{
+			$total = 0;
+			$carts = 'panier vide';
+		}
+		return view('cart.show', ['carts' => $carts , 'total' => $total]);
 	}
 }

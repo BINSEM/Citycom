@@ -12,7 +12,7 @@
 					<a class="item">Petits Cailloux</a>
 				</div>
 			</div>
-			<a class="item">Aide</a>
+			<a class="item" href="/cart">Aide</a>
 			<div class="right menu">
 
 				@if (Auth::guest())
