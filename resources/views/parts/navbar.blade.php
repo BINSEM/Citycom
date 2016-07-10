@@ -14,7 +14,10 @@
 			</div>
 			<a href="/panier" class="item">
 				<i class="shop icon"></i>
-				Panier
+				Panier <br>
+				@if(isset($total))
+					{{$total}} €
+				@endif
 			</a>
 			<div class="right menu">
 

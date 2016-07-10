@@ -18,6 +18,15 @@ class OrderServiceProvider extends ServiceProvider
             require __DIR__.'/../routes.php';
         }
 
+        $total = 0;
+        if(session()->has('carts')) {
+            $produits = session()->get('carts');
+            foreach ($produits as $key => $value) {
+                $total += $value['prix'];
+            }
+        }
+        View::share('total', $total);
+
         $this->loadViewsFrom(__DIR__.'/../../Views', 'order');
     }
 

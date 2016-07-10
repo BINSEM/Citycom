@@ -10,20 +10,16 @@
 | and give it the controller to call when that URI is requested.
 |	 ajouter le 'middleware' => 'auth'
 */
-use App\Product;
+
 use App\Order;
-use App\Deliver;
-use App\Paiement;
 
 Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin'], function () {
 	Route::controller('/', 'Admin\Controller\AdminController');
 });
-Route::get('/magasin', function(){
-	$products = Product::all();
-	return view('home')->with(['products' => $products]);
-});
+
+
 Route::group(['middleware' => 'web'], function(){
-	Route::get('/panier', function(){
+	Route::post('/panier', function(){
 		$basket = array();
 		if(session()->has('cart')){
 			$cart = session()->get('cart');
@@ -40,30 +36,7 @@ Route::group(['middleware' => 'web'], function(){
 			}
 		}
 		$basket = implode(',', $basket);
-		session()->put('current_basket', $basket);
-		$products = array();
-		$total = 0;
-		foreach ($detail as $key => $value) {
-			$product = Product::find($key);
-			$product['qte'] = $value;
-			$total += ($product['qte']*$product['prix']);
-			array_push($products, $product);
-		}
-		if(Auth::check()){
-			$user = Auth::user();
-		} else {
-			$user['id'] = 0;
-		}
-		$livraisons = Deliver::all();
-		$paiements = Paiement::all();
-		return view('order::panier')->with(['products' => $products, 'total' => number_format($total, 2, '.', ' '), 'user' =>$user, 'livraisons' => $livraisons, 'paiements' => $paiements]);
-	});
-	Route::post('/panier', function(){
-		if(session()->has('current_basket')){
-			$basket = session()->get('current_basket');
-		} else {
-			$basket = '0';
-		}
+
 		if(Auth::check()) {
 			$user = Auth::user();
 			$order = new Order;
@@ -78,11 +51,6 @@ Route::group(['middleware' => 'web'], function(){
 		return redirect('/commande');
 	});
 	Route::get('/commande', function(){
-		if(Auth::check()){
-			return view('order::commande');
-		} else {
-			return redirect('/');
-		}
+		return view('order::confirmer');
 	});
-
 });

@@ -25,6 +25,7 @@
 						</div>
 						<div class="content">
 							<a class="header">{{$product->nom}}</a>
+							<h4>{{$product->prix}} €</h4>
 							<div class="description">
 								{{$product->description}}
 							</div>
@@ -41,7 +42,6 @@
 							<i class="zoom icon"></i>
 								Plus d'informations
 							</a>
-
 						</div>
 					</div>
 				</div>

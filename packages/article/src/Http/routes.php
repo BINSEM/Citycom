@@ -43,7 +43,5 @@ Route::get('/articleSup/{id}', 'Article\Controller\ProductController@productDele
 Route::get('/restaurer/{id}', 'Article\Controller\ProductController@productRestore');
 // suppression définitive d'un article
 Route::get('/supprDef/{id}', 'Article\Controller\ProductController@deleteDef');
-// vue de la listes des articles selon la catégorie sélectionnées
-Route::get('/articlesCategorie', 'Article\Controller\ProductController@getCategorie');
 // liste des articles selon les catégories choisies
 Route::get('/listeArticles', 'Article\Controller\ProductController@getCategorie');
