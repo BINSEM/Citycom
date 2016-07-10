@@ -15,7 +15,7 @@
 			<a class="item">
 				<i class="shop icon"></i>
 				Panier
-				<br>{{$carts}} Produits {{$total}} &euro;</a>
+				<br>@if (isset($carts)) {{$carts}} Produits {{$total}} &euro; @endif</a>
 				<div class="right menu">
 
 					@if (Auth::guest())
