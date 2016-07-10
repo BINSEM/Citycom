@@ -19,6 +19,7 @@
 					<td class="right aligned">{{$cart['prix']}} &euro;</td>
 				</tr>
 				@endforeach
+	{{dd($carts)}}
 				<tr>
 					<td></td>
 					<td></td>
@@ -26,7 +27,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<form action="" method="post" >
+		<form action="/cart/commade/{{id}}" method="post" >
 			{{ csrf_field() }}
 			<button type="submit" class="ui yellow button right floated">Commander</button>
 		</form>

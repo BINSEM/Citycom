@@ -46,7 +46,6 @@ class CartController extends Controller
 	public function showCart(Request $request)
 	{
 		$carts = $request->session()->get('cart');
-		// $objects = new Cart();
 		$sum = [];
 
 		if(count($carts) > 0){
@@ -55,10 +54,12 @@ class CartController extends Controller
 				array_push($sum, $cart['prix']);
 			}
 			$total = array_sum($sum);
+			$carts = (object)$carts;
 		}else{
 			$total = 0;
 			$carts = [];
 		}
-		return view('cart.show', ['carts' => $carts , 'total' => $total]);
+
+		return view('cart.show')->with(['carts' => $carts , 'total' => $total]);
 	}
 }
