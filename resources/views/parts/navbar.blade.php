@@ -18,9 +18,9 @@
 			</a>
 			<div class="right menu">
 
-				@if (Auth::guest())
 				<form class="ui form">
 					<div class="item">
+					@if (Auth::guest())
 						<div class="shake-chunk">
 							<input type="button" onClick="parent.location='/register'" class="ui fluid yellow button" value="Inscription" />
 						</div> 
@@ -29,72 +29,18 @@
 						<div class="shake-little">
 							<input type="button" onClick="parent.location='/login'" class="ui fluid yellow button" value="Connection" />
 						</div>
+					</div>
+					@else
 						@if(Auth::check() && (Auth::user()->roles->contains('nom', 'admin')))
 						<div class="item">
 							<input type="button" onClick="parent.location='/admin'" class="ui fluid red button" value="Administration" />
 						</div>
-					</div>
-					@else
+						@endif
 					<div class="item">
 						<input type="button" onClick="parent.location='/logout'" class="ui fluid yellow button" value="Déconnection" />
 					</div>
-					@if(Auth::check() && (Auth::user()->roles->contains('nom', 'admin')))
-					<div class="item">
-						<input type="button" onClick="parent.location='/admin'" class="ui fluid red button" value="Administration" />
-					</div>
 					@endif
 				</form>
-				@endif
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="ui stackable grid">
-	<div class="mobile only row">
-		<div class="ui fixed menu">
-			<div class="ui vertical  menu" >
-				<div class="ui menu ori ">
-					<a class="item" href="/">Accueil</a>
-					<div class="ui dropdown item">
-						<i class="dropdown icon"></i>
-						Catégories
-						<div class="ui menu">
-							<a class="item">Gros Cailloux</a>
-							<a class="item">Moyens Cailloux</a>
-							<a class="item">Petits Cailloux</a>
-						</div>
-					</div>
-					<a class="item" href="/cart">Panier</a>
-					<div class="right menu">
-
-						@if (Auth::guest())
-						<form class="ui form">
-							<div class="item">
-								<div class="ui vertical buttons">
-									<div class="shake-chunk">
-										<input type="button" onClick="parent.location='/register'" class="ui mini yellow button" value="Inscription" />
-									</div> 
-								&nbsp;
-								&nbsp;
-								<div class="shake-little">
-									<input type="button" onClick="parent.location='/login'" class="ui mini yellow button" value="Connection" />
-								</div>
-								</div>
-							@else
-							<div class="item">
-								<input type="button" onClick="parent.location='/logout'" class="ui fluid yellow button" value="Déconnection" />
-							</div>
-							@if(Auth::check() && (Auth::user()->roles->contains('nom', 'admin')))
-							<div class="item">
-								<input type="button" onClick="parent.location='/admin'" class="ui fluid red button" value="Administration" />
-							</div>
-							</div>
-							@endif
-						</form>
-						@endif
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
