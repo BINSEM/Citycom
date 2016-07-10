@@ -10,15 +10,14 @@
 | and give it the controller to call when that URI is requested.
 |	 ajouter le 'middleware' => 'auth'
 */
-
+use App\Order;
 
 Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin'], function () {
 	Route::controller('/', 'Admin\Controller\AdminController');
 });
-Route::get('/magasin', function(){
-	return 'Magasin';
-});
-Route::post('/panier', function(){
+
+Route::group(['middleware' => 'web'], function(){
+	Route::post('/panier', function(){
 		$basket = array();
 		if(session()->has('cart')){
 			$cart = session()->get('cart');
@@ -48,6 +47,7 @@ Route::post('/panier', function(){
 		}
 		return redirect('/commande');
 	});
-Route::get('/commande', function(){
-	return view('order::confirmer');
+	Route::get('/commande', function(){
+		return view('order::confirmer');
+	});
 });
