@@ -1,10 +1,5 @@
-@include('parts.header')
-<div class="ui vertical pointing menu">
-  <a href="/listeArticles" class="item">Liste des articles </a>
-  <a href="/ajoutArticle" class="item">Ajouter un article </a>
-  <a href="/articlesSupprimes" class="item">Articles supprimés </a>
-</div>
-
+@extends('article::main')
+@section('content')
 <h1>Liste des articles supprimés</h1>
 <div class="ui grid">
   <div class="twelve wide centered column">
@@ -47,3 +42,5 @@
     </table>
   </div>
 </div>
+
+@endsection

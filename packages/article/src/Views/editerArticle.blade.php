@@ -1,9 +1,5 @@
-<div class="ui vertical pointing menu">
-  <a href="/listeArticles" class="item">Liste des articles </a>
-  <a href="/ajoutArticle" class="item">Ajouter un article </a>
-  <a href="/articlesSupprimes" class="item">Articles supprimés </a>
-</div>
-@include('parts.header')
+@extends('article::main')
+@section('content')
 <div class="ui grid">
   <div class="ten wide centered column">
     <form method="POST" action="/nouvelArticle/" class="ui huge form">
@@ -26,17 +22,72 @@
           <label>Référence</label>
           <input type="text" name="ref" placeholder="Référence" value="{{$article->ref}}">
         </div>
-        <label>Catégories</label>
-      <div class="two fields">
+        <div class="inline fields" value="{{$article->couleur}}">
+        <label for="fruit">Selectionner la couleur:</label>
         <div class="field">
-          <label>Couleur</label>
-          <input type="text" name="couleur" placeholder="Couleur" value="{{$article->couleur}}">
+          <div class="ui radio checkbox">
+            <input type="radio" name="couleur" value="noir" tabindex="5" class="hidden">
+            <label>noir</label>
+          </div>
         </div>
         <div class="field">
-          <label>Type</label>
-          <input type="text" name="type" placeholder="Type" value="{{$article->type}}">
+          <div class="ui radio checkbox">
+            <input type="radio" name="couleur" value="gris" tabindex="4" class="hidden">
+            <label>gris</label>
+          </div>
         </div>
-      </div> 
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="couleur" value="rose" tabindex="3" class="hidden">
+            <label>rose</label>
+          </div>
+        </div>    
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="couleur" value="marron" tabindex="2" class="hidden">
+            <label>marron</label>
+          </div>
+        </div>    
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="couleur" value="multicolor" tabindex="1" class="hidden">
+            <label>multicolor</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="couleur" value="bleu" tabindex="0" class="hidden">
+            <label>bleu</label>
+          </div>
+        </div>
+      </div>
+            <div class="inline fields">
+        <label for="fruit">Selectionner le type:</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="type" value="caillou" tabindex="3" class="hidden">
+            <label>caillou</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="type" value="galet" tabindex="2" class="hidden">
+            <label>galet</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="type" value="roche" tabindex="1" class="hidden">
+            <label>roche</label>
+          </div>
+        </div>    
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="type" value="autre" tabindex="0" class="hidden">
+            <label>autre</label>
+          </div>
+        </div>    
+      </div>
         <div class="field">
           <label>Image</label>
           <input type="text" name="img" placeholder="Image" value="{{$article->img}}">
@@ -49,3 +100,4 @@
       </form>
     </div>
   </div>
+  @endsection
