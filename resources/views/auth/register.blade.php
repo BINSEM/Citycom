@@ -69,7 +69,7 @@
                 &nbsp;
             </div>
 
-            <button type="submit" class="ui yellow button">S'inscrire</button>
+            <button formaction="{{ url('/register') }}" formmethod="post" type="submit" class="ui yellow button">S'inscrire</button>
         </form>
     </div>
 </div>
